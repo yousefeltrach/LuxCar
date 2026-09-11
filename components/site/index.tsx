@@ -1,0 +1,16 @@
+export { Header } from "./Header";
+export { HeroSection } from "./HeroSection";
+export { TrustStrip } from "./TrustStrip";
+export { StatsSection } from "./StatsSection";
+export { FleetSection } from "./FleetSection";
+export { HowItWorks } from "./HowItWorks";
+export { DestinationsSection } from "./DestinationsSection";
+export { WhyChooseUs } from "./WhyChooseUs";
+export { TrustedBrands } from "./TrustedBrands";
+export { PaymentSection } from "./PaymentSection";
+export { FAQSection } from "./FAQSection";
+export { CTASection } from "./CTASection";
+export { Footer } from "./Footer";
+export { MobileNav } from "./MobileNav";
+export { WhatsAppFloat } from "./WhatsAppFloat";
+export { Preloader } from "./Preloader";
