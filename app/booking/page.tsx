@@ -1,7 +1,7 @@
-import { Header } from "@/components/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/Header";
-import { Footer } from "@/components/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/Footer";
-import { MobileNav } from "@/components/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/MobileNav";
-import { WhatsAppFloat } from "@/components/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/WhatsAppFloat";
+import { Header } from "@/components/site/Header";
+import { Footer } from "@/components/site/Footer";
+import { MobileNav } from "@/components/site/MobileNav";
+import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 import Link from "next/link";
 
 export default function BookingPage() {

@@ -15,7 +15,7 @@ export function HeroSection() {
     <section className="relative -mt-16 md:-mt-20 overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src="/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/images/herobackground.png"
+          src="/images/herobackground.png"
           alt="Yazkech Rental car in front of the Koutoubia in Marrakech at sunset"
           className="absolute inset-0 h-full w-full object-cover"
         />

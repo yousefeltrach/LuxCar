@@ -81,7 +81,7 @@ export function Header() {
       <div className="mx-auto flex h-full max-w-7xl items-center justify-between gap-6 px-4 md:px-6 lg:px-8">
         <Link href="/">
           <img
-            src="/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/logos/logo.png"
+            src="/logos/logo.png"
             alt="Yazkech Rental"
             className="h-10 w-auto"
           />
@@ -164,7 +164,7 @@ export function Header() {
             <SheetContent side="right" className="w-80 bg-white">
               <SheetHeader className="flex flex-row items-center justify-between border-b border-zinc-100 pb-4">
                 <img
-                  src="/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/logos/logo.png"
+src="/logos/logo.png"
                   alt="Yazkech Rental"
                   className="h-8 w-auto"
                 />

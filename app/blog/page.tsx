@@ -1,7 +1,7 @@
-import { Header } from "@/components/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/Header";
-import { Footer } from "@/components/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/Footer";
-import { MobileNav } from "@/components/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/MobileNav";
-import { WhatsAppFloat } from "@/components/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/WhatsAppFloat";
+import { Header } from "@/components/site/Header";
+import { Footer } from "@/components/site/Footer";
+import { MobileNav } from "@/components/site/MobileNav";
+import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
@@ -9,7 +9,7 @@ import { ArrowRight } from "lucide-react";
 const articles = [
   {
     slug: "prix-location-voiture-marrakech",
-    image: "/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/images/destination-djemaa.jpg",
+    image: "/images/destination-djemaa.jpg",
     category: "Location de voiture",
     title: "Combien coûte une location de voiture à Marrakech en 2026 ?",
     excerpt:
@@ -19,7 +19,7 @@ const articles = [
   },
   {
     slug: "location-voiture-sans-chauffeur-marrakech",
-    image: "/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/images/destination-ozoud.jpg",
+    image: "/images/destination-ozoud.jpg",
     category: "Location de voiture",
     title:
       "Location de voiture sans chauffeur à Marrakech : tout ce qu'il faut savoir",
@@ -30,7 +30,7 @@ const articles = [
   },
   {
     slug: "conduire-au-maroc-guide",
-    image: "/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/images/destination-atlas.jpg",
+    image: "/images/destination-atlas.jpg",
     category: "Conduite au Maroc",
     title:
       "Conduire au Maroc : règles, conseils et informations pratiques",
@@ -41,7 +41,7 @@ const articles = [
   },
   {
     slug: "marrakech-essaouira-voiture",
-    image: "/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/images/destination-essaouira.jpg",
+    image: "/images/destination-essaouira.jpg",
     category: "Destinations",
     title: "Marrakech à Essaouira en voiture : itinéraire et conseils",
     excerpt:
@@ -84,7 +84,7 @@ export default function BlogPage() {
           <Link href="/blog/location-voiture-marrakech-guide" className="group block overflow-hidden rounded-3xl">
             <div className="relative h-72 sm:h-96">
               <Image
-                src="/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/images/herobackground.png"
+                src="/images/herobackground.png"
                 alt="Location de voiture à Marrakech"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"

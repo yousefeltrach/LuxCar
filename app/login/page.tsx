@@ -15,7 +15,7 @@ export default function LoginPage() {
       <div className="hidden lg:flex lg:w-1/2 relative flex-col justify-center px-12 py-16">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/images/herobackground.png"
+            src="/images/herobackground.png"
             alt="Car rental in Marrakech"
             fill
             className="object-cover"
@@ -26,7 +26,7 @@ export default function LoginPage() {
 
         <div className="relative z-10">
           <Image
-            src="/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/logos/logo.png"
+            src="/logos/logo.png"
             alt="Yazkech Rental"
             width={120}
             height={40}
@@ -54,7 +54,7 @@ export default function LoginPage() {
           <div className="mb-8 lg:hidden">
             <Link href="/" className="inline-block">
               <Image
-                src="/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/logos/logo.png"
+src="/logos/logo.png"
                 alt="Yazkech Rental"
                 width={100}
                 height={32}

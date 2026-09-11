@@ -7,7 +7,7 @@ const brands = [
   { name: "Peugeot", file: "peugeot.svg.webp" },
 ];
 
-const imgRoot = "/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/brands/";
+const imgRoot = "/brands/";
 
 function BrandList({ ariaHidden }: { ariaHidden?: boolean }) {
   return (

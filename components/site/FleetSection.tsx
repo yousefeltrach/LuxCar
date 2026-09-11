@@ -11,7 +11,7 @@ interface Car {
   slug: string;
 }
 
-const IMAGE_ROOT = "/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/cars/";
+const IMAGE_ROOT = "/cars/";
 
 const cars: Car[] = [
   {

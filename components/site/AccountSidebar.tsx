@@ -19,7 +19,7 @@ export function AccountSidebar({ activeItem }: AccountSidebarProps) {
     <aside className="hidden lg:flex lg:w-64 lg:flex-col lg:border-r lg:border-foreground/10 lg:p-6">
       <Link href="/" className="mb-8 inline-block">
         <Image
-          src="/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/logos/logo.png"
+          src="/logos/logo.png"
           alt="Yazkech Rental"
           width={120}
           height={32}

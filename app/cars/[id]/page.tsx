@@ -4,7 +4,7 @@ import { ArrowLeft, Heart, ChevronRight, MapPin } from "lucide-react";
 import { cars } from "@/types/carsRent";
 
 const CDN = "https://api.yazkechrental.com/uploads/cars";
-const IMAGE_ROOT = "/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/cars/";
+const IMAGE_ROOT = "/cars/";
 
 const IMAGE_MAP: Record<string, string[]> = {
   "51bd85a6-e4b6-4432-8458-80e83d4736c9": [

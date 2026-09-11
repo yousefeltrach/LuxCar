@@ -24,13 +24,13 @@ export function Preloader() {
       }`}
     >
       <img
-        src="/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/logos/logo.png"
+        src="/logos/logo.png"
         alt="YazKechRental"
         className="h-16 w-auto sm:h-20"
       />
       <div className="relative h-12 w-64 overflow-hidden sm:h-16 sm:w-72">
         <img
-          src="/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/images/car-side.png"
+          src="/images/car-side.png"
           alt=""
           className="absolute -top-1 left-0 h-12 w-auto translate-x-[-100%] animate-[cl-drive_1.6s_linear_infinite] sm:h-16"
         />

@@ -8,7 +8,7 @@ import { Footer, Header, MobileNav, WhatsAppFloat } from "@/components/site";
 import { Reveal } from "@/components/shared/Reveal";
 
 
-const IMAGE_ROOT = "/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/cars/";
+const IMAGE_ROOT = "/cars/";
 import { cars } from "@/types/carsRent";
 
 const categories = [

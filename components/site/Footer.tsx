@@ -1,6 +1,6 @@
 import { Lock } from "lucide-react";
 
-const IMG = "/sites/yazkechrental-com-a4958d18/en-7a4ba3ba";
+const IMG = "";
 
 const navLinks = [
   { label: "Home", href: "/" },

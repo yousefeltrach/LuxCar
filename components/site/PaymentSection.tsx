@@ -1,7 +1,7 @@
 import { CalendarCheck, Check, Lock } from "lucide-react";
 import { Reveal } from "../shared/Reveal";
 
-const IMAGE_ROOT = "/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/images/";
+const IMAGE_ROOT = "/images/";
 
 const points = [
   "Pay by credit or debit card",

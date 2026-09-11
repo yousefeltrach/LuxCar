@@ -4,22 +4,22 @@ const destinations = [
   {
     name: "Marrakech Medina",
     desc: "City center",
-    image: "/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/images/destination-djemaa.jpg",
+    image: "/images/destination-djemaa.jpg",
   },
   {
     name: "Atlas Mountains",
     desc: "1h15 drive",
-    image: "/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/images/destination-atlas.jpg",
+    image: "/images/destination-atlas.jpg",
   },
   {
     name: "Essaouira Coast",
     desc: "2h30 drive",
-    image: "/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/images/destination-essaouira.jpg",
+    image: "/images/destination-essaouira.jpg",
   },
   {
     name: "Ouzoud Falls",
     desc: "2h45 drive",
-    image: "/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/images/destination-ozoud.jpg",
+    image: "/images/destination-ozoud.jpg",
   },
 ];
 
