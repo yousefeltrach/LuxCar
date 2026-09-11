@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, Heart, ChevronRight, MapPin } from "lucide-react";
-import { cars } from "@/types/yazkechrental";
+import { cars } from "@/types/carsRent";
 
 const CDN = "https://api.yazkechrental.com/uploads/cars";
 const IMAGE_ROOT = "/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/cars/";

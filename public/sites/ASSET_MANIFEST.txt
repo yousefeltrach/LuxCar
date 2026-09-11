@@ -1,0 +1,23 @@
+# Asset manifest for yazkechrental-com-a4958d18/en-7a4ba3ba
+# Source: https://www.yazkechrental.com/en
+logos/logo.png <- https://www.yazkechrental.com/logos/logo.png
+images/herobackground.png <- https://www.yazkechrental.com/images/herobackground.png
+images/car-side.png <- https://www.yazkechrental.com/images/loading/car-side.png
+images/destination-djemaa.jpg <- https://www.yazkechrental.com/images/destination/Djemaa_el_Fna.jpg
+images/destination-atlas.jpg <- https://www.yazkechrental.com/images/destination/destination-atlas.jpg
+images/destination-essaouira.jpg <- https://www.yazkechrental.com/images/destination/Essaouira_Atlantic.jpg
+images/destination-ozoud.jpg <- https://www.yazkechrental.com/images/destination/ozoud.jpg
+brands/audi.svg.webp <- https://www.yazkechrental.com/images/brands/Audi_Logo_1995.svg.webp
+brands/dacia.svg.webp <- https://www.yazkechrental.com/images/brands/Dacia_2021.svg.webp
+brands/renault.svg.webp <- https://www.yazkechrental.com/images/brands/Renault_2021_Text.svg.webp
+brands/peugeot.svg.webp <- https://www.yazkechrental.com/images/brands/Peugeot_Logo.svg.webp
+images/cmi.png <- https://www.yazkechrental.com/images/cmi.png
+images/visalogo.svg <- https://www.yazkechrental.com/images/visalogo.svg
+images/mastercard.svg <- https://www.yazkechrental.com/images/Mastercard.svg
+images/favicon.ico <- https://www.yazkechrental.com/favicon.ico
+cars/audi-a1.webp <- https://api.yazkechrental.com/uploads/cars/7f577a38-77ed-409b-9017-a20d1425e3da/108319d9-59b6-4e25-a30d-7facdd4fe560.webp
+cars/dacia-duster.webp <- https://api.yazkechrental.com/uploads/cars/537cc809-580a-4977-9dd2-2701183f8018/25c9ceb3-15c7-4288-b74c-ea668b6466cb.webp
+cars/dacia-sandero.webp <- https://api.yazkechrental.com/uploads/cars/94217b92-01dc-4ad9-8e50-2b4bd58c8886/fb6f42d0-0741-4595-9392-232e330600ef.webp
+cars/dacia-logain.webp <- https://api.yazkechrental.com/uploads/cars/ad0b697b-f1f9-4a3c-9e16-c358ed5bd888/a8921712-17c8-422f-92b0-c7e6fbf1e798.webp
+cars/renault-clio5.webp <- https://api.yazkechrental.com/uploads/cars/51bd85a6-e4b6-4432-8458-80e83d4736c9/510c469e-c78c-46b4-8e4f-5ebc298619e3.webp
+cars/peugeot-208.webp <- https://api.yazkechrental.com/uploads/cars/a0f5ee13-0eaa-4b7d-a9b2-515127edee1b/22dcc1bc-7820-43b0-8c6e-9637c3d5e3e3.webp

@@ -1,9 +1,7 @@
+import { Reveal } from "@/components/shared/Reveal";
+import { Footer, Header, MobileNav, WhatsAppFloat } from "@/components/site";
 import { Car, Plane, ShieldCheck, Clock } from "lucide-react";
-import { Header } from "@/components/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/Header";
-import { Footer } from "@/components/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/Footer";
-import { MobileNav } from "@/components/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/MobileNav";
-import { WhatsAppFloat } from "@/components/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/WhatsAppFloat";
-import { Reveal } from "@/components/sites/yazkechrental-com-a4958d18/shared/Reveal";
+
 
 const services = [
   {

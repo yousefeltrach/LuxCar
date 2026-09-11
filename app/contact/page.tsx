@@ -1,14 +1,12 @@
+import { Reveal } from "@/components/shared/Reveal";
+import { Footer, Header, MobileNav, WhatsAppFloat } from "@/components/site";
 import {
   Phone,
   MessageCircle,
   Mail,
   MapPin,
 } from "lucide-react";
-import { Header } from "@/components/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/Header";
-import { Footer } from "@/components/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/Footer";
-import { MobileNav } from "@/components/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/MobileNav";
-import { WhatsAppFloat } from "@/components/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/WhatsAppFloat";
-import { Reveal } from "@/components/sites/yazkechrental-com-a4958d18/shared/Reveal";
+
 
 const googleMapsUrl =
   "https://www.google.com/maps/search/?api=1&query=Magasin%20sis%20au%20n%2046%20avenue%20abdelkrim%20el%20khattabi%2C%20Marrakech%2C%20Maroc";

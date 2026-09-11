@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { Heart } from "lucide-react"
-import { AccountSidebar } from "@/components/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/AccountSidebar"
+import { AccountSidebar } from "@/components/site/AccountSidebar"
 
 export default function WishlistPage() {
   return (

@@ -1,16 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
-import { Header } from "@/components/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/Header";
-import { Footer } from "@/components/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/Footer";
-import { MobileNav } from "@/components/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/MobileNav";
-import { WhatsAppFloat } from "@/components/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/WhatsAppFloat";
-import { Reveal } from "@/components/sites/yazkechrental-com-a4958d18/shared/Reveal";
+import Link from "next/link";   
+
 import { Heart, ChevronRight, ChevronDown } from "lucide-react";
-import { cars } from "@/types/yazkechrental";
+import { Footer, Header, MobileNav, WhatsAppFloat } from "@/components/site";
+import { Reveal } from "@/components/shared/Reveal";
+
 
 const IMAGE_ROOT = "/sites/yazkechrental-com-a4958d18/en-7a4ba3ba/cars/";
+import { cars } from "@/types/carsRent";
 
 const categories = [
   "ALL",
