@@ -84,7 +84,7 @@ export default function BlogPage() {
           <Link href="/blog/location-voiture-marrakech-guide" className="group block overflow-hidden rounded-3xl">
             <div className="relative h-72 sm:h-96">
               <Image
-                src="/images/herobackground.png"
+                src="/images/herobackground-v2.png"
                 alt="Location de voiture à Marrakech"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"

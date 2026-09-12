@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Car, BadgeDollarSign, MapPin, Headphones, Check } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
@@ -89,9 +90,9 @@ export default function AboutPage() {
                 </div>
               </Reveal>
             </div>
-            <img
-              src="/images/herobackground.png"
-              alt=""
+            <Image
+              src="/images/herobackground-v2.png"
+              alt="Background image of a car rental agency in Marrakech"
               className="pointer-events-none absolute right-0 top-0 hidden h-full w-1/2 object-cover opacity-20 md:block"
             />
           </div>

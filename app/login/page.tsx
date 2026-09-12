@@ -15,7 +15,7 @@ export default function LoginPage() {
       <div className="hidden lg:flex lg:w-1/2 relative flex-col justify-center px-12 py-16">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/herobackground.png"
+            src="/images/herobackground-v2.png"
             alt="Car rental in Marrakech"
             fill
             className="object-cover"
