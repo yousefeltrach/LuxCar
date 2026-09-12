@@ -1,4 +1,6 @@
 import { CalendarCheck, Search } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
 
 const pickupLocations = [
   "Select a location",
@@ -14,10 +16,13 @@ export function HeroSection() {
   return (
     <section className="relative -mt-16 md:-mt-20 overflow-hidden">
       <div className="absolute inset-0">
-        <img
+        <Image
           src="/images/herobackground.png"
           alt="Yazkech Rental car in front of the Koutoubia in Marrakech at sunset"
-          className="absolute inset-0 h-full w-full object-cover"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60" />
@@ -33,13 +38,13 @@ export function HeroSection() {
         <p className="mt-5 max-w-xl text-base text-white/85 md:text-lg">
           Recent, comfortable cars suited to all your needs.
         </p>
-        <a
+        <Link
           href="/cars"
           className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3.5 font-semibold text-white shadow-lg shadow-black/20 transition-colors hover:bg-primary/90"
         >
           <CalendarCheck size={18} />
           Book now
-        </a>
+        </Link>
       </div>
 
       <div className="relative z-20 mx-auto -mt-24 max-w-6xl px-4 pb-16">
