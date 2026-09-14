@@ -10,6 +10,7 @@
 //   );
 // }
 
+import MarqueeBrandsDemo from "@/components/shadcn-space/marquee/marquee-02";
 import {
   CTASection,
   DestinationsSection,
@@ -27,6 +28,8 @@ import {
   TrustStrip,
   WhatsAppFloat,
    WhyChooseUs } from "@/components/site";
+import Demo from "@/components/site/demo";
+
 
 
 export default function Home() {
@@ -45,6 +48,8 @@ export default function Home() {
         <DestinationsSection />
         <WhyChooseUs />
         <TrustedBrands />
+        <Demo />
+        <MarqueeBrandsDemo />
         <PaymentSection />
         <FAQSection />
         <CTASection />

@@ -11,16 +11,6 @@ export interface Car {
 
 export const cars: Car[] = [
   {
-    id: "7f577a38-77ed-409b-9017-a20d1425e3da",
-    brand: "Audi",
-    model: "A1",
-    transmission: "Automatic",
-    seats: 4,
-    pricePerDay: 1000,
-    image: "audi-a1.webp",
-    slug: "7f577a38-77ed-409b-9017-a20d1425e3da",
-  },
-  {
     id: "537cc809-580a-4977-9dd2-2701183f8018",
     brand: "Dacia",
     model: "Duster",
@@ -43,7 +33,7 @@ export const cars: Car[] = [
   {
     id: "ad0b697b-f1f9-4a3c-9e16-c358ed5bd888",
     brand: "Dacia",
-    model: "Logain",
+    model: "Logan",
     transmission: "Manual",
     seats: 5,
     pricePerDay: 350,
@@ -69,6 +59,46 @@ export const cars: Car[] = [
     pricePerDay: 450,
     image: "peugeot-208.webp",
     slug: "a0f5ee13-0eaa-4b7d-a9b2-515127edee1b",
+  },
+  {
+    id: "citroen-c3",
+    brand: "Citroën",
+    model: "C3",
+    transmission: "Automatic",
+    seats: 5,
+    pricePerDay: 350,
+    image: "citroen-c3.svg",
+    slug: "citroen-c3",
+  },
+  {
+    id: "hyundai-i10",
+    brand: "Hyundai",
+    model: "i10",
+    transmission: "Manual",
+    seats: 5,
+    pricePerDay: 320,
+    image: "hyundai-i10.svg",
+    slug: "hyundai-i10",
+  },
+  {
+    id: "kia-picanto",
+    brand: "Kia",
+    model: "Picanto",
+    transmission: "Manual",
+    seats: 4,
+    pricePerDay: 300,
+    image: "kia-picanto.svg",
+    slug: "kia-picanto",
+  },
+  {
+    id: "toyota-yaris",
+    brand: "Toyota",
+    model: "Yaris",
+    transmission: "Automatic",
+    seats: 5,
+    pricePerDay: 400,
+    image: "toyota-yaris.svg",
+    slug: "toyota-yaris",
   },
 ];
 

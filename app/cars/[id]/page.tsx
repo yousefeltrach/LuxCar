@@ -14,10 +14,13 @@ const IMAGE_MAP: Record<string, string[]> = {
   ],
 };
 
-function getCarImages(carId: string): string[] {
+function getCarImages(carId: string, fallback: string): string[] {
   const mapped = IMAGE_MAP[carId];
   if (mapped) {
     return mapped.map((uuid) => `${CDN}/${carId}/${uuid}.webp`);
+  }
+  if (fallback) {
+    return [`${IMAGE_ROOT}${fallback}`];
   }
   const prefix = carId.slice(0, 8);
   return [
@@ -40,7 +43,7 @@ export default async function CarDetailPage({
   const car = cars.find((c) => c.slug === id);
   if (!car) notFound();
 
-  const images = getCarImages(car.id);
+  const images = getCarImages(car.id, car.image);
   const similar = cars.filter((c) => c.slug !== car.slug).slice(0, 3);
 
   return (

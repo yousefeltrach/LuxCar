@@ -1,10 +1,13 @@
 import { Reveal } from "../shared/Reveal";
 
 const brands = [
-  { name: "Audi", file: "audi.svg.webp" },
   { name: "Dacia", file: "dacia.svg.webp" },
   { name: "Renault", file: "renault.svg.webp" },
   { name: "Peugeot", file: "peugeot.svg.webp" },
+  { name: "Citroën", file: "citroen.svg" },
+  { name: "Hyundai", file: "hyundai.svg" },
+  { name: "Kia", file: "kia.svg" },
+  { name: "Toyota", file: "toyota.svg" },
 ];
 
 const imgRoot = "/brands/";

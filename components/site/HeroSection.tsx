@@ -9,7 +9,7 @@ import { Calender } from "./Calender"
 export function HeroSection() {
   return (
     <>
-      <section className="relative -mt-16 overflow-hidden md:-mt-20">
+      <section className="relative  -mt-16 overflow-hidden md:-mt-20">
       <div className="absolute inset-0">
         <Image
           src="/images/herobackground-v2.png"
@@ -23,9 +23,9 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60" />
       </div>
 
-      <Card className="relative z-10 ml-82 mt-24 flex w-full max-w-lg flex-col items-center gap-3 rounded-2xl bg-black/90 px-4 pb-32 pt-24 text-left ring-white/10 backdrop-blur md:pt-28">
-        <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-orange-500">
-          Car rental in Agadir
+      <Card className="relative z-10 ml-82 mt-24 flex p-10 w-full max-w-lg flex-col items-right gap-3 rounded-2xl bg-black/90 px-4 pb-32 pt-24 text-left ring-white/10 backdrop-blur md:pt-12">
+        <p className="text-[14px] font-bold uppercase tracking-[0.25em] text-orange-500">
+          Car rental in Agadir 
         </p>
         <h1 className="font-display text-2xl font-semibold leading-tight text-white sm:text-3xl md:text-4xl">
           Discover Agadir <span className="text-orange-500">at your own pace</span>
@@ -35,7 +35,7 @@ export function HeroSection() {
         </p>
         <Link
           href="/cars"
-          className="mt-1 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-black shadow-lg shadow-black/30 transition-colors hover:bg-white/90"
+          className="mt-1 inline-flex items-center gap-4 rounded-full text-white bg-orange-500 px-5 py-2.5  font-semibold text-xl shadow-lg shadow-black/30 transition-colors hover:bg-white/90"
         >
           <CalendarCheck size={18} />
           Book now
