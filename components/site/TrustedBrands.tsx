@@ -1,5 +1,5 @@
 import { Reveal } from "../shared/Reveal"
-import { Marquee } from "./marquee"
+import { Marquee } from "../ui/marquee"
 
 const brands = [
   { name: "Dacia", file: "dacia" },
@@ -24,23 +24,23 @@ export  function TrustedBrands() {
           </h2>
         </Reveal>
     <div className="mt-16 w-full">
-      <Marquee pauseOnHover duration={25}>
+      <Marquee pauseOnHover className="[--duration:25s]">
         {brands.map((brand) => (
           <div
             key={brand.name}
             title={brand.name}
-            className="group relative mx-3 flex size-28 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all duration-300 hover:border-orange-500/40 hover:shadow-lg hover:shadow-orange-500/10 md:size-32"
+            className="group/tile relative mx-3 flex size-28 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all duration-300 hover:border-orange-500/40 hover:shadow-lg hover:shadow-orange-500/10 md:size-32"
           >
             <img
               src={`/brands/icons/${brand.file}-52525B.svg`}
               alt={brand.name}
-              className="size-16 object-contain opacity-80 transition-opacity duration-300 group-hover:opacity-0 md:size-[72px]"
+              className="size-16 object-contain opacity-80 transition-all duration-300 group-hover/tile:scale-110 group-hover/tile:opacity-0 md:size-[72px]"
             />
             <img
               src={`/brands/icons/${brand.file}-F97316.svg`}
               alt=""
               aria-hidden
-              className="absolute size-16 object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100 md:size-[72px]"
+              className="absolute size-16 scale-90 object-contain opacity-0 transition-all duration-300 group-hover/tile:scale-110 group-hover/tile:opacity-100 md:size-[72px]"
             />
           </div>
         ))}
