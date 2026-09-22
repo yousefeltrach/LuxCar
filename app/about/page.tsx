@@ -5,7 +5,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { MobileNav } from "@/components/site/MobileNav";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
-import { Reveal } from "@/components/shared/Reveal";
+import { Reveal } from "@/components/ui/Reveal";
 
 const highlights = [
   "Based in Marrakech",

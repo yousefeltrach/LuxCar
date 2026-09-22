@@ -1,6 +1,6 @@
 import { CalendarCheck, Check, Lock } from "lucide-react";
 import Link from "next/link";
-import { Reveal } from "../shared/Reveal";
+import { Reveal } from "../ui/Reveal";
 import { Card } from "../ui/card";
 import Image from "next/image";
 import { Button } from "../ui/button";

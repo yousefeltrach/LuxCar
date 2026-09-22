@@ -1,7 +1,7 @@
 
 
 import { ChevronRight, Heart } from "lucide-react";
-import { Reveal } from "../shared/Reveal";
+import { Reveal } from "../ui/Reveal";
 import Link from "next/link";
 import Image from "next/image";
 import { Card, CardFooter } from "../ui/card";

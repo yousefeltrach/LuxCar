@@ -1,4 +1,4 @@
-import { Reveal } from "../shared/Reveal";
+import { Reveal } from "../ui/Reveal";
 import { CalendarCheck, MessageCircle } from "lucide-react";
 
 export function CTASection() {

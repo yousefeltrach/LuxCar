@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import { Heart, ChevronRight, ChevronDown } from "lucide-react";
 import { Footer, Header, MobileNav, WhatsAppFloat } from "@/components/site";
-import { Reveal } from "@/components/shared/Reveal";
+import { Reveal } from "@/components/ui/Reveal";
 
 
 const IMAGE_ROOT = "/cars/";

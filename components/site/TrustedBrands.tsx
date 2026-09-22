@@ -1,4 +1,4 @@
-import { Reveal } from "../shared/Reveal"
+import { Reveal } from "../ui/Reveal"
 import { Marquee } from "../ui/marquee"
 import Image from "next/image"
 
