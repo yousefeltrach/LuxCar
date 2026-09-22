@@ -50,9 +50,9 @@ export function PaymentSection() {
               <h3 className="text-xl font-semibold">Accepted payment methods</h3>
               <p className="mt-1 text-sm text-muted-foreground">Your payment information is protected.</p>
               <div className="mt-6 flex items-center gap-4">
-                <img src={`${IMAGE_ROOT}cmi.png`} alt="Paiement CMI" className="h-[18px] w-auto" />
-                <img src={`${IMAGE_ROOT}visalogo.svg`} alt="Visa" className="h-[18px] w-auto" />
-                <img src={`${IMAGE_ROOT}mastercard.svg`} alt="Mastercard" className="h-[18px] w-auto" />
+                <Image src={`${IMAGE_ROOT}cmi.png`} alt="Paiement CMI" width={56} height={18} className="h-[18px] w-auto" />
+                <Image src={`${IMAGE_ROOT}visalogo.svg`} alt="Visa" width={72} height={18} unoptimized className="h-[18px] w-auto" />
+                <Image src={`${IMAGE_ROOT}mastercard.svg`} alt="Mastercard" width={72} height={18} unoptimized className="h-[18px] w-auto" />
               </div>
               <p className="mt-8 flex items-center gap-2 border-t border-foreground/10 pt-6 text-sm text-muted-foreground">
                 <Lock className="size-4 text-orange-500" />

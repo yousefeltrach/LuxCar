@@ -99,10 +99,12 @@ export function FleetSection() {
             <Reveal key={car.slug} delay={i * 80}>
               <article className="group overflow-hidden rounded-3xl bg-white ring-1 ring-foreground/10 transition-shadow hover:shadow-2xl hover:shadow-black/5">
                 <div className="relative h-52 overflow-hidden sm:h-56">
-                  <img
+                  <Image
                     src={`${IMAGE_ROOT}${car.image}`}
                     alt={car.model}
-                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <button
                     aria-label="Ajouter aux favoris"

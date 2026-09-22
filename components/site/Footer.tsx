@@ -1,6 +1,8 @@
 import { Lock } from "lucide-react";
+import Image from "next/image";
 
 const IMG = "";
+const IMAGE_ROOT = "/images/";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -36,7 +38,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
         <div className="grid gap-10 py-14 md:grid-cols-[1.6fr_1fr_1fr_1fr]">
           <div>
-            <img src={`${IMG}/logos/logo.png`} alt="Yazkech Rental" className="h-10 w-auto" />
+            <Image src={`${IMG}/logos/logo.png`} alt="Yazkech Rental" width={150} height={40} className="h-10 w-auto" />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
               Premium car rental in Marrakech — simple, transparent, no surprises.
             </p>
@@ -67,11 +69,18 @@ export function Footer() {
             <span className="font-medium">Secure payment</span>
             <span>— Pay for your reservation securely by credit or debit card.</span>
           </div>
-          <div className="flex items-center gap-4">
-            <img src={`${IMG}/cmi.png`} alt="Paiement CMI" className="h-3.5 w-auto" />
-            <img src={`${IMG}/visalogo.svg`} alt="Visa" className="h-3.5 w-auto" />
-            <img src={`${IMG}/mastercard.svg`} alt="Mastercard" className="h-3.5 w-auto" />
-          </div>
+    
+            <div className="flex items-center gap-6">
+              <div className=" flex items-center gap-4">
+                <Image src={`${IMAGE_ROOT}cmi.png`} alt="Paiement CMI" width={56} height={18} className="h-[18px] w-auto" />
+                <Image src={`${IMAGE_ROOT}visalogo.svg`} alt="Visa" width={72} height={18} unoptimized className="h-[18px] w-auto" />
+                <Image src={`${IMAGE_ROOT}mastercard.svg`} alt="Mastercard" width={72} height={18} unoptimized className="h-[18px] w-auto" />
+              </div>
+              <p className=" flex items-center gap-2   text-sm text-muted-foreground">
+                <Lock className="size-4 text-orange-500" />
+                Secure payment by card
+              </p>
+            </div>
         </div>
 
         <div className="flex flex-col items-center justify-between gap-2 border-t border-foreground/10 py-6 text-sm text-muted-foreground md:flex-row">

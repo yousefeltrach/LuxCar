@@ -1,5 +1,6 @@
 import { Reveal } from "../shared/Reveal"
 import { Marquee } from "../ui/marquee"
+import Image from "next/image"
 
 const brands = [
   { name: "Dacia", file: "dacia" },
@@ -31,16 +32,22 @@ export  function TrustedBrands() {
             title={brand.name}
             className="group/tile relative mx-3 flex size-28 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all duration-300 hover:border-orange-500/40 hover:shadow-lg hover:shadow-orange-500/10 md:size-32"
           >
-            <img
+            <Image
               src={`/brands/icons/${brand.file}-52525B.svg`}
               alt={brand.name}
+              width={64}
+              height={64}
+              unoptimized
               className="size-16 object-contain opacity-80 transition-all duration-300 group-hover/tile:scale-110 group-hover/tile:opacity-0 md:size-[72px]"
             />
-            <img
+            <Image
               src={`/brands/icons/${brand.file}-F97316.svg`}
               alt=""
               aria-hidden
-              className="absolute size-16 scale-90 object-contain opacity-0 transition-all duration-300 group-hover/tile:scale-110 group-hover/tile:opacity-100 md:size-[72px]"
+              fill
+              sizes="128px"
+              unoptimized
+              className="size-16 scale-90 object-contain opacity-0 transition-all duration-300 group-hover/tile:scale-110 group-hover/tile:opacity-100 md:size-[72px]"
             />
           </div>
         ))}
