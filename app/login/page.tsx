@@ -2,7 +2,18 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, CheckCircle, Eye, EyeOff, Lock, Mail, ShieldCheck, Star } from "lucide-react"
+   import {
+  ArrowRight,
+  CheckCircle,
+  Eye,
+  EyeOff,
+  Lock,
+  Mail,
+  Phone,
+  ShieldCheck,
+  Star,
+  User,
+} from "lucide-react"
 import { useState } from "react"
 
 const stats = [
@@ -11,11 +22,24 @@ const stats = [
   { icon: ShieldCheck, value: "24/7", label: "Support" },
 ]
 
+type Mode = "signin" | "register"
+
+const headings = {
+  signin: { title: "Welcome back", subtitle: "Sign in to manage your bookings and reservations." },
+  register: { title: "Create your account", subtitle: "Join Yazkech and rent your car in Marrakech in minutes." },
+} as const
+
 export default function LoginPage() {
+  const [mode, setMode] = useState<Mode>("signin")
+  const [firstName, setFirstName] = useState("")
+  const [lastName, setLastName] = useState("")
+  const [phone, setPhone] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const [confirmPassword, setConfirmPassword] = useState("")
   const [showPassword, setShowPassword] = useState(false)
   const [rememberMe, setRememberMe] = useState(false)
+  const [acceptTerms, setAcceptTerms] = useState(false)
 
   return (
     <div className="flex min-h-screen">
@@ -102,12 +126,66 @@ export default function LoginPage() {
             Back to home
           </Link>
 
-          <h2 className="text-3xl font-semibold text-foreground">Welcome back</h2>
-          <p className="mt-2 text-muted-foreground">
-            Sign in to manage your bookings and reservations.
-          </p>
+          <h2 className="text-3xl font-semibold text-foreground">{headings[mode].title}</h2>
+          <p className="mt-2 text-muted-foreground">{headings[mode].subtitle}</p>
 
           <form className="mt-8 flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}>
+            {mode === "register" && (
+              <div className="grid grid-cols-2 gap-3">
+                <div className="flex flex-col gap-1.5">
+                  <label htmlFor="firstName" className="text-sm font-medium text-foreground">
+                    First name
+                  </label>
+                  <div className="relative">
+                    <User className="pointer-events-none absolute left-3.5 top-1/2 size-4 -translate-y-1/2 text-muted-foreground/70" />
+                    <input
+                      id="firstName"
+                      type="text"
+                      placeholder="Yaz"
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
+                      className="w-full rounded-xl border border-border bg-background py-3 pl-10 pr-4 text-sm text-foreground placeholder:text-muted-foreground/60 shadow-sm transition-all focus:border-primary/50 focus:outline-none focus:ring-4 focus:ring-primary/15"
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-col gap-1.5">
+                  <label htmlFor="lastName" className="text-sm font-medium text-foreground">
+                    Last name
+                  </label>
+                  <div className="relative">
+                    <User className="pointer-events-none absolute left-3.5 top-1/2 size-4 -translate-y-1/2 text-muted-foreground/70" />
+                    <input
+                      id="lastName"
+                      type="text"
+                      placeholder="Kechec"
+                      value={lastName}
+                      onChange={(e) => setLastName(e.target.value)}
+                      className="w-full rounded-xl border border-border bg-background py-3 pl-10 pr-4 text-sm text-foreground placeholder:text-muted-foreground/60 shadow-sm transition-all focus:border-primary/50 focus:outline-none focus:ring-4 focus:ring-primary/15"
+                    />
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {mode === "register" && (
+              <div className="flex flex-col gap-1.5">
+                <label htmlFor="phone" className="text-sm font-medium text-foreground">
+                  Phone number
+                </label>
+                <div className="relative">
+                  <Phone className="pointer-events-none absolute left-3.5 top-1/2 size-4 -translate-y-1/2 text-muted-foreground/70" />
+                  <input
+                    id="phone"
+                    type="tel"
+                    placeholder="+212 6 12 34 56 78"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    className="w-full rounded-xl border border-border bg-background py-3 pl-10 pr-4 text-sm text-foreground placeholder:text-muted-foreground/60 shadow-sm transition-all focus:border-primary/50 focus:outline-none focus:ring-4 focus:ring-primary/15"
+                  />
+                </div>
+              </div>
+            )}
+
             <div className="flex flex-col gap-1.5">
               <label htmlFor="email" className="text-sm font-medium text-foreground">
                 Email
@@ -130,12 +208,14 @@ export default function LoginPage() {
                 <label htmlFor="password" className="text-sm font-medium text-foreground">
                   Password
                 </label>
-                <Link
-                  href="/forgot-password"
-                  className="text-sm font-medium text-primary hover:underline"
-                >
-                  Forgot password?
-                </Link>
+                {mode === "signin" && (
+                  <Link
+                    href="/forgot-password"
+                    className="text-sm font-medium text-primary hover:underline"
+                  >
+                    Forgot password?
+                  </Link>
+                )}
               </div>
               <div className="relative">
                 <Lock className="pointer-events-none absolute left-3.5 top-1/2 size-4 -translate-y-1/2 text-muted-foreground/70" />
@@ -162,39 +242,101 @@ export default function LoginPage() {
               </div>
             </div>
 
-            <label className="mt-1 flex cursor-pointer items-center gap-2 text-sm text-muted-foreground select-none">
-              <input
-                type="checkbox"
-                checked={rememberMe}
-                onChange={(e) => setRememberMe(e.target.checked)}
-                className="size-4 rounded border-border accent-primary"
-              />
-              Keep me signed in
-            </label>
+            {mode === "register" && (
+              <div className="flex flex-col gap-1.5">
+                <label htmlFor="confirmPassword" className="text-sm font-medium text-foreground">
+                  Confirm password
+                </label>
+                <div className="relative">
+                  <Lock className="pointer-events-none absolute left-3.5 top-1/2 size-4 -translate-y-1/2 text-muted-foreground/70" />
+                  <input
+                    id="confirmPassword"
+                    type={showPassword ? "text" : "password"}
+                    placeholder="••••••••"
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                    className="w-full rounded-xl border border-border bg-background py-3 pl-10 pr-4 text-sm text-foreground placeholder:text-muted-foreground/60 shadow-sm transition-all focus:border-primary/50 focus:outline-none focus:ring-4 focus:ring-primary/15"
+                  />
+                </div>
+              </div>
+            )}
+
+            {mode === "signin" ? (
+              <label className="mt-1 flex cursor-pointer items-center gap-2 text-sm text-muted-foreground select-none">
+                <input
+                  type="checkbox"
+                  checked={rememberMe}
+                  onChange={(e) => setRememberMe(e.target.checked)}
+                  className="size-4 rounded border-border accent-primary"
+                />
+                Keep me signed in
+              </label>
+            ) : (
+              <label className="mt-1 flex cursor-pointer items-start gap-2 text-sm text-muted-foreground select-none">
+                <input
+                  type="checkbox"
+                  checked={acceptTerms}
+                  onChange={(e) => setAcceptTerms(e.target.checked)}
+                  className="mt-0.5 size-4 rounded border-border accent-primary"
+                />
+                <span>
+                  I agree to the{" "}
+                  <Link href="/terms" className="font-medium text-primary hover:underline">
+                    Terms of Service
+                  </Link>{" "}
+                  and{" "}
+                  <Link href="/privacy" className="font-medium text-primary hover:underline">
+                    Privacy Policy
+                  </Link>
+                  .
+                </span>
+              </label>
+            )}
 
             <button
               type="submit"
               className="group mt-3 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:bg-primary/90 hover:shadow-primary/30 active:translate-y-px"
             >
-              Sign in
+              {mode === "signin" ? "Sign in" : "Create account"}
               <ArrowRight className="size-4 transition-transform duration-200 group-hover:translate-x-0.5" />
             </button>
           </form>
 
-          <div className="my-8 flex items-center gap-3">
-            <span className="h-px flex-1 bg-border" />
-            <span className="text-xs uppercase tracking-wider text-muted-foreground/70">
-              New to Yazkech?
-            </span>
-            <span className="h-px flex-1 bg-border" />
-          </div>
+          {mode === "signin" && (
+            <button
+              type="button"
+              onClick={() => setMode("register")}
+              className="mt-8 inline-flex w-full items-center justify-center rounded-xl border border-border bg-background py-3.5 text-sm font-semibold text-foreground transition-all hover:border-primary/40 hover:bg-muted"
+            >
+              Create an account
+            </button>
+          )}
 
-          <Link
-            href="/register"
-            className="inline-flex w-full items-center justify-center rounded-xl border border-border bg-background py-3.5 text-sm font-semibold text-foreground transition-all hover:border-primary/40 hover:bg-muted"
-          >
-            Create an account
-          </Link>
+          <p className="mt-8 text-center text-sm text-muted-foreground">
+            {mode === "signin" ? (
+              <>
+                Don&apos;t have an account?{" "}
+                <button
+                  type="button"
+                  onClick={() => setMode("register")}
+                  className="font-medium text-primary hover:underline"
+                >
+                  Sign up
+                </button>
+              </>
+            ) : (
+              <>
+                Already have an account?{" "}
+                <button
+                  type="button"
+                  onClick={() => setMode("signin")}
+                  className="font-medium text-primary hover:underline"
+                >
+                  Sign in
+                </button>
+              </>
+            )}
+          </p>
         </div>
       </div>
     </div>
