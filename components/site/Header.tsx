@@ -8,14 +8,10 @@ import {
   Menu,
   CalendarCheck,
   ChevronDown,
-  Home,
-  Car,
-  Phone,
-  User,
-  MessageCircle,
+ 
   X,
 } from "lucide-react"
-import { Button } from "@/components/ui/button"
+
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -27,13 +23,12 @@ import {
   SheetTrigger,
   SheetContent,
   SheetHeader,
-  SheetTitle,
   SheetClose,
 } from "@/components/ui/sheet"
 
 const navLinks = [
   { label: "Vehicles", href: "/cars" },
-  { label: "How it works", href: "#how-it-works" },
+  { label: "How it works", href: "/#how-it-works" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ]

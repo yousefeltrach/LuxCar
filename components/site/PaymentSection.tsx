@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Reveal } from "../ui/Reveal";
 import { Card } from "../ui/card";
 import Image from "next/image";
-import { Button } from "../ui/button";
 
 const IMAGE_ROOT = "/images/";
 
@@ -36,13 +35,13 @@ export function PaymentSection() {
                 </div>
               ))}
             </div>
-            <Button
-              render={<Link href="/cars" />}
+            <Link
+              href="/cars"
               className="mt-8 inline-flex h-auto items-center gap-2 rounded-full bg-primary px-7 py-3.5 font-semibold text-white transition-colors hover:bg-primary/90"
             >
               <CalendarCheck className="size-4.5" />
               Book now
-            </Button>
+            </Link>
           </Reveal>
 
           <Reveal delay={150}>

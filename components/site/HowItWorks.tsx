@@ -111,7 +111,7 @@ function Step({
 
 export  function HowItWorks() {
   return (
-     <main className="py-16 sm:py-24 bg-white px-6  text-[#111111]">
+     <main id="how-it-works" className="scroll-mt-16 bg-white px-6 py-16 text-[#111111] sm:py-24 md:scroll-mt-20">
       <section className="mx-auto max-w-[1216px]">
         <p className="text-center text-[14px] font-medium uppercase tracking-[0.02em] text-[#ff6500]">
           How it works
