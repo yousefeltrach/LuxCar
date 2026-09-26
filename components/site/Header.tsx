@@ -61,18 +61,21 @@ const accountLinks = [
   { label: "Book now", href: "/booking" },
 ]
 
-export function Header() {
+export function Header({ solid = false }: { solid?: boolean }) {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 24)
+    handleScroll()
     window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  const onLight = solid || scrolled
+
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-40 h-16 transition-all duration-300 md:h-20 ${scrolled ? "border-b border-zinc-200/60 bg-white shadow-xl shadow-black/5" : "bg-transparent backdrop-blur-md"}`}
+      className={`fixed inset-x-0 top-0 z-40 h-16 transition-all duration-300 md:h-20 ${onLight ? "border-b border-zinc-200/60 bg-white shadow-xl shadow-black/5" : "bg-transparent backdrop-blur-md"}`}
     >
       <div className="mx-auto flex h-full max-w-7xl items-center justify-between gap-6 px-4 md:px-6 lg:px-8">
         <Link href="/">
@@ -91,7 +94,7 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className={`relative text-sm font-medium tracking-wide transition-colors duration-300 ${scrolled ? "text-zinc-900 hover:text-primary" : "text-white hover:text-orange-400"}`}
+              className={`relative text-sm font-medium tracking-wide transition-colors duration-300 ${onLight ? "text-zinc-900 hover:text-primary" : "text-white hover:text-orange-400"}`}
             >
               {link.label}
               <span className="absolute -bottom-1 left-0 h-0.5 w-full origin-left rounded-full bg-orange-500 transition-transform duration-300 scale-x-0 hover:scale-x-100" />
@@ -102,7 +105,7 @@ export function Header() {
         <div className="hidden items-center gap-3 md:flex">
           <DropdownMenu>
             <DropdownMenuTrigger
-              className={`inline-flex items-center gap-1 rounded-md p-2 transition-colors duration-300 ${scrolled ? "text-zinc-900 hover:text-primary" : "text-white hover:text-orange-400"}`}
+              className={`inline-flex items-center gap-1 rounded-md p-2 transition-colors duration-300 ${onLight ? "text-zinc-900 hover:text-primary" : "text-white hover:text-orange-400"}`}
             >
               <Globe className="size-5" />
               <ChevronDown className="size-3.5" />
@@ -121,7 +124,7 @@ export function Header() {
 
           <Link
             href="/login"
-            className={`rounded-md px-3 py-2 text-sm font-medium transition-colors duration-300 ${scrolled ? "text-zinc-900 hover:text-primary" : "text-white hover:text-orange-400"}`}
+            className={`rounded-md px-3 py-2 text-sm font-medium transition-colors duration-300 ${onLight ? "text-zinc-900 hover:text-primary" : "text-white hover:text-orange-400"}`}
           >
             Sign in
           </Link>
@@ -138,7 +141,7 @@ export function Header() {
         <div className="flex items-center gap-2 md:hidden">
           <DropdownMenu>
             <DropdownMenuTrigger
-              className={`inline-flex items-center rounded-md p-2 transition-colors duration-300 ${scrolled ? "text-zinc-900 hover:text-primary" : "text-white hover:text-orange-400"}`}
+              className={`inline-flex items-center rounded-md p-2 transition-colors duration-300 ${onLight ? "text-zinc-900 hover:text-primary" : "text-white hover:text-orange-400"}`}
             >
               <Globe className="size-5" />
             </DropdownMenuTrigger>
@@ -156,7 +159,7 @@ export function Header() {
 
           <Sheet>
             <SheetTrigger
-              className={`inline-flex items-center rounded-md p-2 transition-colors duration-300 ${scrolled ? "text-zinc-900 hover:text-primary" : "text-white hover:text-orange-400"}`}
+              className={`inline-flex items-center rounded-md p-2 transition-colors duration-300 ${onLight ? "text-zinc-900 hover:text-primary" : "text-white hover:text-orange-400"}`}
             >
               <Menu className="size-6" />
             </SheetTrigger>
