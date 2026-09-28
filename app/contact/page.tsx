@@ -59,8 +59,8 @@ export default function ContactPage() {
       <WhatsAppFloat />
       <main className="flex-1 pt-16 md:pt-20">
         <section className="relative -mt-16 overflow-hidden bg-[#0b1526] pt-28 pb-14 text-white sm:pt-32 md:-mt-20 md:pt-36 md:pb-16">
-          <div className="pointer-events-none absolute -end-24 -top-24 size-72 rounded-full bg-primary/25 blur-3xl" />
-          <div className="pointer-events-none absolute -start-24 -bottom-24 size-72 rounded-full bg-primary/10 blur-3xl" />
+          <div className="pointer-events-none absolute -inset-e-24 -top-24 size-72 rounded-full bg-primary/25 blur-3xl" />
+          <div className="pointer-events-none absolute -inset-s-24 -bottom-24 size-72 rounded-full bg-primary/10 blur-3xl" />
           <div className="relative mx-auto w-full max-w-7xl px-4 text-center sm:px-6 lg:px-8">
             <Reveal>
               <p className="text-sm font-medium uppercase tracking-wide text-primary">

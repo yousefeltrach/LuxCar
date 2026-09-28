@@ -5,7 +5,6 @@ import Image from "next/image"
 import Link from "next/link"
 import { Car, Fuel, Gauge, Heart, Users } from "lucide-react"
 import { cn } from "cn"
-
 import { buttonVariants } from "@/components/ui/button"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { useWishlist } from "@/hooks/use-wishlist"
@@ -38,7 +37,7 @@ function CarImage({
     return (
       <div
         className={cn(
-          "flex size-full flex-col items-center justify-center gap-2 bg-gradient-to-br from-primary/15 via-muted to-muted text-primary",
+          "flex size-full flex-col items-center justify-center gap-2 bg-linear-to-br from-primary/15 via-muted to-muted text-primary",
           className
         )}
       >
@@ -169,7 +168,7 @@ export function CarCard({ car }: { car: CarType }) {
         <WishlistButton
           carId={car.id}
           carLabel={label}
-          className="absolute top-3 end-3 size-8 rounded-full bg-background/90 shadow-sm backdrop-blur-sm"
+          className="absolute top-3 inset-e-3 size-8 rounded-full bg-background/90 shadow-sm backdrop-blur-sm"
         />
       </div>
       <CardContent className="space-y-1">

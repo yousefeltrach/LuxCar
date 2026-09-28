@@ -54,47 +54,42 @@ export default function AboutPage() {
       <MobileNav />
       <WhatsAppFloat />
       <main className="flex-1 pt-16 md:pt-20">
-        <section className="relative overflow-hidden bg-[#0b1526] text-white">
-          <div className="mx-auto max-w-7xl px-4 py-20 md:px-6 md:py-28 lg:px-8">
-            <div className="relative z-10 max-w-3xl">
-              <Reveal>
-                <p className="text-sm font-medium uppercase tracking-wide text-primary">
-                  About us
-                </p>
-              </Reveal>
-              <Reveal>
-                <h1 className="mt-4 font-display text-4xl font-semibold leading-tight sm:text-5xl md:text-6xl">
-                  Driven by a better rental experience
-                </h1>
-              </Reveal>
-              <Reveal>
-                <p className="mt-6 text-lg text-white/70">
-                  A local car rental agency in Marrakech, focused on reliable
-                  cars, fair prices and real support — from booking to drop-off.
-                </p>
-              </Reveal>
-              <Reveal>
-                <div className="mt-8 flex flex-wrap gap-4">
-                  <Link
-                    href="/cars"
-                    className="inline-flex items-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition hover:opacity-90"
-                  >
-                    Book a car
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center rounded-full border border-primary/30 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/5"
-                  >
-                    Contact us
-                  </Link>
-                </div>
-              </Reveal>
-            </div>
-            <Image
-              src="/images/herobackground-v2.png"
-              alt="Background image of a car rental agency in Marrakech"
-              className="pointer-events-none absolute right-0 top-0 hidden h-full w-1/2 object-cover opacity-20 md:block"
-            />
+        <section className="relative -mt-16 overflow-hidden bg-[#0b1526] pt-28 pb-14 text-white sm:pt-32 md:-mt-20 md:pt-36 md:pb-16">
+          <div className="pointer-events-none absolute -inset-e-24 -top-24 size-72 rounded-full bg-primary/25 blur-3xl" />
+          <div className="pointer-events-none absolute -inset-s-24 -bottom-24 size-72 rounded-full bg-primary/10 blur-3xl" />
+          <div className="relative mx-auto w-full max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+            <Reveal>
+              <p className="text-sm font-medium uppercase tracking-wide text-primary">
+                About us
+              </p>
+            </Reveal>
+            <Reveal>
+              <h1 className="mt-3 font-display text-3xl font-semibold tracking-tight sm:text-4xl">
+                Driven by a better rental experience
+              </h1>
+            </Reveal>
+            <Reveal>
+              <p className="mx-auto mt-3 max-w-md text-white/70">
+                A local car rental agency in Marrakech, focused on reliable cars,
+                fair prices and real support — from booking to drop-off.
+              </p>
+            </Reveal>
+            <Reveal>
+              <div className="mt-8 flex flex-wrap justify-center gap-4">
+                <Link
+                  href="/cars"
+                  className="inline-flex items-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition hover:opacity-90"
+                >
+                  Book a car
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center rounded-full border border-primary/30 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/5"
+                >
+                  Contact us
+                </Link>
+              </div>
+            </Reveal>
           </div>
         </section>
 
@@ -109,7 +104,18 @@ export default function AboutPage() {
               A Marrakech agency, built around drivers
             </h2>
           </Reveal>
-          <div className="mt-8 grid gap-12 lg:grid-cols-2">
+          <div className="mt-8 grid items-center gap-12 lg:grid-cols-2">
+            <Reveal>
+              <div className="relative aspect-4/3 overflow-hidden rounded-3xl">
+                <Image
+                  src="/images/herobackground-v2.png"
+                  alt="Yazkech Rental fleet in Marrakech"
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            </Reveal>
             <div>
               <Reveal>
                 <p className="text-muted-foreground">

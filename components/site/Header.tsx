@@ -1,6 +1,5 @@
 "use client"
 
-import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import {
@@ -62,21 +61,10 @@ const accountLinks = [
 ]
 
 export function Header({ solid = false }: { solid?: boolean }) {
-  const [scrolled, setScrolled] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 24)
-    handleScroll()
-    window.addEventListener("scroll", handleScroll, { passive: true })
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
-
-  const onLight = solid || scrolled
+  void solid
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-40 h-16 transition-all duration-300 md:h-20 ${onLight ? "border-b border-zinc-200/60 bg-white shadow-xl shadow-black/5" : "bg-transparent backdrop-blur-md"}`}
-    >
+    <header className="fixed inset-x-0 top-0 z-40 h-16 border-b border-zinc-200/60 bg-white shadow-xl shadow-black/5 md:h-20">
       <div className="mx-auto flex h-full max-w-7xl items-center justify-between gap-6 px-4 md:px-6 lg:px-8">
         <Link href="/">
           <Image
@@ -94,7 +82,7 @@ export function Header({ solid = false }: { solid?: boolean }) {
             <Link
               key={link.href}
               href={link.href}
-              className={`relative text-sm font-medium tracking-wide transition-colors duration-300 ${onLight ? "text-zinc-900 hover:text-primary" : "text-white hover:text-orange-400"}`}
+              className="relative text-sm font-medium tracking-wide text-zinc-900 transition-colors duration-300 hover:text-primary"
             >
               {link.label}
               <span className="absolute -bottom-1 left-0 h-0.5 w-full origin-left rounded-full bg-orange-500 transition-transform duration-300 scale-x-0 hover:scale-x-100" />
@@ -105,7 +93,7 @@ export function Header({ solid = false }: { solid?: boolean }) {
         <div className="hidden items-center gap-3 md:flex">
           <DropdownMenu>
             <DropdownMenuTrigger
-              className={`inline-flex items-center gap-1 rounded-md p-2 transition-colors duration-300 ${onLight ? "text-zinc-900 hover:text-primary" : "text-white hover:text-orange-400"}`}
+              className="inline-flex items-center gap-1 rounded-md p-2 text-zinc-900 transition-colors duration-300 hover:text-primary"
             >
               <Globe className="size-5" />
               <ChevronDown className="size-3.5" />
@@ -124,7 +112,7 @@ export function Header({ solid = false }: { solid?: boolean }) {
 
           <Link
             href="/login"
-            className={`rounded-md px-3 py-2 text-sm font-medium transition-colors duration-300 ${onLight ? "text-zinc-900 hover:text-primary" : "text-white hover:text-orange-400"}`}
+            className="rounded-md px-3 py-2 text-sm font-medium text-zinc-900 transition-colors duration-300 hover:text-primary"
           >
             Sign in
           </Link>
@@ -140,9 +128,7 @@ export function Header({ solid = false }: { solid?: boolean }) {
 
         <div className="flex items-center gap-2 md:hidden">
           <DropdownMenu>
-            <DropdownMenuTrigger
-              className={`inline-flex items-center rounded-md p-2 transition-colors duration-300 ${onLight ? "text-zinc-900 hover:text-primary" : "text-white hover:text-orange-400"}`}
-            >
+            <DropdownMenuTrigger className="inline-flex items-center rounded-md p-2 text-zinc-900 transition-colors duration-300 hover:text-primary">
               <Globe className="size-5" />
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
@@ -158,9 +144,7 @@ export function Header({ solid = false }: { solid?: boolean }) {
           </DropdownMenu>
 
           <Sheet>
-            <SheetTrigger
-              className={`inline-flex items-center rounded-md p-2 transition-colors duration-300 ${onLight ? "text-zinc-900 hover:text-primary" : "text-white hover:text-orange-400"}`}
-            >
+            <SheetTrigger className="inline-flex items-center rounded-md p-2 text-zinc-900 transition-colors duration-300 hover:text-primary">
               <Menu className="size-6" />
             </SheetTrigger>
             <SheetContent side="right" className="w-80 bg-white">

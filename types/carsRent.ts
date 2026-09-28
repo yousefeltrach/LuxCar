@@ -119,7 +119,7 @@ export const cars: Car[] = [
     seats: 5,
     pricePerDay: 350,
     isAvailable: true,
-    image: "citroen-c3.svg",
+    image: "citroen-c3.webp",
     slug: "citroen-c3",
   },
   {
@@ -133,7 +133,7 @@ export const cars: Car[] = [
     seats: 4,
     pricePerDay: 320,
     isAvailable: true,
-    image: "hyundai-i10.svg",
+    image: "hyundai-i10.webp",
     slug: "hyundai-i10",
   },
   {
@@ -147,7 +147,7 @@ export const cars: Car[] = [
     seats: 4,
     pricePerDay: 300,
     isAvailable: true,
-    image: "kia-picanto.svg",
+    image: "kia-picanto.webp",
     slug: "kia-picanto",
   },
   {
@@ -161,7 +161,7 @@ export const cars: Car[] = [
     seats: 5,
     pricePerDay: 400,
     isAvailable: true,
-    image: "toyota-yaris.svg",
+    image: "toyota-yaris.webp",
     slug: "toyota-yaris",
   },
 ];

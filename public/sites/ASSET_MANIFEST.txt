@@ -21,3 +21,10 @@ cars/dacia-sandero.webp <- https://api.yazkechrental.com/uploads/cars/94217b92-0
 cars/dacia-logain.webp <- https://api.yazkechrental.com/uploads/cars/ad0b697b-f1f9-4a3c-9e16-c358ed5bd888/a8921712-17c8-422f-92b0-c7e6fbf1e798.webp
 cars/renault-clio5.webp <- https://api.yazkechrental.com/uploads/cars/51bd85a6-e4b6-4432-8458-80e83d4736c9/510c469e-c78c-46b4-8e4f-5ebc298619e3.webp
 cars/peugeot-208.webp <- https://api.yazkechrental.com/uploads/cars/a0f5ee13-0eaa-4b7d-a9b2-515127edee1b/22dcc1bc-7820-43b0-8c6e-9637c3d5e3e3.webp
+
+# These four cars are not served by the upstream API, so their photos come from
+# Wikimedia Commons (resized/cropped to 1200x900 WebP).
+cars/citroen-c3.webp  <- https://commons.wikimedia.org/wiki/File:2019_Citro%C3%ABn_C3_R5.jpg   (CC BY-SA 4.0, Calreyn88)
+cars/hyundai-i10.webp <- https://commons.wikimedia.org/wiki/File:2017_Hyundai_i10.jpg         (CC BY-SA 4.0, Corvettec6r)
+cars/kia-picanto.webp <- https://commons.wikimedia.org/wiki/File:Kia_Picanto_(TA)_facelift.jpg (CC BY-SA 4.0, Sturm)
+cars/toyota-yaris.webp <- https://commons.wikimedia.org/wiki/File:Toyota_Yaris_Hybrid_(2021)_(52186532350).jpg (CC BY 2.0, Charles from Port Chester, New York)
