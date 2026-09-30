@@ -120,7 +120,7 @@ export default function AboutPage() {
               <Reveal>
                 <p className="text-muted-foreground">
                   Yazkech Rental started with a simple idea: renting a car in
-                  Marrakech shouldn't come with surprises. We're a local team
+                  Marrakech shouldn’t come with surprises. We’re a local team
                   who knows the city, the roads to the Atlas and the coast, and
                   what travelers actually need to get around with confidence.
                 </p>

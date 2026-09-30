@@ -16,6 +16,7 @@ import Image from "next/image"
 } from "lucide-react"
 import { useState } from "react"
 
+
 const stats = [
   { icon: CheckCircle, value: "500+", label: "Happy clients" },
   { icon: Star, value: "4.9/5", label: "Average rating" },
@@ -339,6 +340,7 @@ export default function LoginPage() {
           </p>
         </div>
       </div>
+  
     </div>
   )
 }
