@@ -19,10 +19,10 @@ export function Calender() {
           className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:items-end"
         >
           <div>
-            <label className="mb-1.5 block text-xs font-medium text-muted-foreground">
+            <label className="mb-1.5 block text-xs font-medium text-black">
               Pickup location
             </label>
-            <select className="w-full rounded-xl border border-input bg-white px-3.5 py-3 text-sm focus:border-primary focus:outline-none">
+            <select className="w-full rounded-xl border border-input text-muted-foreground bg-white px-3.5 py-3 text-sm focus:border-primary focus:outline-none">
               {pickupLocations.map((location) => (
                 <option key={location}>{location}</option>
               ))}
@@ -30,27 +30,30 @@ export function Calender() {
           </div>
 
           <div>
-            <label className="mb-1.5 block text-xs font-medium text-muted-foreground">
+            <label className="mb-1.5 block text-xs font-medium text-black">
               Rental dates
             </label>
-            <div className="flex items-center gap-1 rounded-xl border border-input px-4 py-2.5">
+            <div className="flex items-center gap-1 rounded-xl  border border-input px-4 py-2.5">
               <input
                 type="date"
-                className="w-full bg-transparent text-sm outline-none"
+                className="w-full bg-transparent text-muted-foreground text-sm outline-none"
               />
-              <CalendarCheck size={16} className="shrink-0 text-muted-foreground" />
+              <CalendarCheck
+                size={16}
+                className="shrink-0 text-muted-foreground"
+              />
               <input
                 type="date"
-                className="w-full bg-transparent text-sm outline-none"
+                className="w-full bg-transparent text-muted-foreground text-sm outline-none"
               />
             </div>
           </div>
 
           <div>
-            <label className="mb-1.5 block text-xs font-medium text-muted-foreground">
+            <label className="mb-1.5 block text-xs font-medium text-balck">
               Vehicle type
             </label>
-            <select className="w-full rounded-xl border border-input bg-white px-3.5 py-3 text-sm focus:border-primary focus:outline-none">
+            <select className="w-full rounded-xl border border-input text-muted-foreground bg-white px-3.5 py-3 text-sm focus:border-primary focus:outline-none">
               {vehicleTypes.map((type) => (
                 <option key={type}>{type}</option>
               ))}
