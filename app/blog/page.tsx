@@ -71,7 +71,7 @@ export default function BlogPage() {
               Travel &amp; Car Rental Guide
             </p>
             <h1 className="mt-4 font-display text-4xl font-semibold leading-tight sm:text-5xl">
-              Le blog Yazkech Rental
+              Le blog Souss Rental
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-white/80">
               Conseils, guides et inspirations pour découvrir Marrakech et le

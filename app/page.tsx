@@ -1,9 +1,6 @@
-
-
 import {
   CTASection,
   DestinationsSection,
-  FAQSection,
   FleetSection,
   Footer,
   Header,
@@ -16,10 +13,10 @@ import {
   TrustedBrands,
   TrustStrip,
   WhatsAppFloat,
-   WhyChooseUs } from "@/components/site";
+  WhyChooseUs,
+} from "@/components/site";
 
-
-
+import  FaqSection  from "@/components/ui/faq";
 
 export default function Home() {
   return (
@@ -38,7 +35,7 @@ export default function Home() {
         <WhyChooseUs />
         <TrustedBrands />
         <PaymentSection />
-        <FAQSection />
+        <FaqSection />
         <CTASection />
         <Footer />
       </main>

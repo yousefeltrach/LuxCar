@@ -1,8 +1,5 @@
-
-
 import { Footer, Header, MobileNav, WhatsAppFloat } from "@/components/site";
-
-import FrequentlyAskedQuestions from "@/components/ui/faq";
+import FaqSection from "@/components/ui/faq";
 
 export default function FAQPage() {
   return (
@@ -11,7 +8,7 @@ export default function FAQPage() {
       <MobileNav />
       <WhatsAppFloat />
       <main className="flex-1 pt-16 md:pt-20">
-        <FrequentlyAskedQuestions />
+        <FaqSection />
       </main>
       <Footer />
     </>

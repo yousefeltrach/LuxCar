@@ -109,7 +109,7 @@ export default function AboutPage() {
               <div className="relative aspect-4/3 overflow-hidden rounded-3xl">
                 <Image
                   src="/images/herobackground-v2.png"
-                  alt="Yazkech Rental fleet in Marrakech"
+                  alt="Souss Rental fleet"
                   fill
                   sizes="(min-width: 1024px) 50vw, 100vw"
                   className="object-cover"
