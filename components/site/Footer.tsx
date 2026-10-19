@@ -1,7 +1,7 @@
 import { Lock } from "lucide-react";
 import Image from "next/image";
+import { Logo } from "./Logo";
 
-const IMG = "";
 const IMAGE_ROOT = "/images/";
 
 const navLinks = [
@@ -38,9 +38,9 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
         <div className="grid gap-10 py-14 md:grid-cols-[1.6fr_1fr_1fr_1fr]">
           <div>
-            <Image src={`${IMG}/logos/logo.png`} alt="Yazkech Rental" width={150} height={40} className="h-10 w-auto" />
+            <Logo size="md" />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-              Premium car rental in Marrakech — simple, transparent, no surprises.
+              Premium car rental in Agadir — simple, transparent, no surprises.
             </p>
           </div>
 
@@ -84,8 +84,8 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col items-center justify-between gap-2 border-t border-foreground/10 py-6 text-sm text-muted-foreground md:flex-row">
-          <span>&copy; 2026 Yazkech Rental. All rights reserved.</span>
-          <span>Marrakech, Morocco</span>
+          <span>&copy; 2026 agalux Rental. All rights reserved.</span>
+          <span>Agadir, Morocco</span>
         </div>
       </div>
     </footer>

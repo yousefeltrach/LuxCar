@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
+import { Logo } from "./Logo"
 
 const navItems = [
   { label: "Dashboard", href: "/dashboard" },
@@ -17,15 +17,8 @@ interface AccountSidebarProps {
 export function AccountSidebar({ activeItem }: AccountSidebarProps) {
   return (
     <aside className="hidden lg:flex lg:w-64 lg:flex-col lg:border-r lg:border-foreground/10 lg:p-6">
-      <Link href="/" className="mb-8 inline-block">
-        <Image
-          src="/logos/logo.png"
-          alt="Yazkech Rental"
-          width={120}
-          height={32}
-          className="h-8 w-auto"
-          priority
-        />
+      <Link href="/" className="mb-8 inline-block" aria-label="agalux Rental home">
+        <Logo size="sm" priority />
       </Link>
 
       <nav className="flex flex-col gap-1">

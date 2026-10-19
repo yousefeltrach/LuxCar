@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: "Do you deliver to the airport?",
-    a: "Yes, we handle pickup and drop-off directly at Marrakech-Menara airport.",
+    a: "Yes, we handle pickup and drop-off directly at airport.",
   },
 ];
 

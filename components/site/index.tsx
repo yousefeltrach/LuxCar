@@ -1,4 +1,5 @@
 export { Header } from "./Header";
+export { Logo } from "./Logo";
 export { HeroSection } from "./HeroSection";
 export { TrustStrip } from "./TrustStrip";
 export { StatsSection } from "./StatsSection";

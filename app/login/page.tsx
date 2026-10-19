@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
+import { Logo } from "@/components/site/Logo"
    import {
   ArrowRight,
   CheckCircle,
@@ -27,7 +28,7 @@ type Mode = "signin" | "register"
 
 const headings = {
   signin: { title: "Welcome back", subtitle: "Sign in to manage your bookings and reservations." },
-  register: { title: "Create your account", subtitle: "Join Yazkech and rent your car in Marrakech in minutes." },
+  register: { title: "Create your account", subtitle: "Join agalux and rent your car in Agadir in minutes." },
 } as const
 
 export default function LoginPage() {
@@ -48,7 +49,7 @@ export default function LoginPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/herobackground-v2.png"
-            alt="Car rental in Marrakech"
+            alt="Car rental in Agadir"
             fill
             className="object-cover"
             priority
@@ -59,14 +60,9 @@ export default function LoginPage() {
         </div>
 
         <div className="relative z-10">
-          <Image
-            src="/logos/logo.png"
-            alt="Yazkech Rental"
-            width={140}
-            height={40}
-            className="mb-10 h-10 w-auto"
-            priority
-          />
+          <div className="mb-10">
+            <Logo size="md" priority className="drop-shadow-[0_2px_10px_rgba(255,255,255,0.25)]" />
+          </div>
 
           <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.25em] text-orange-400 backdrop-blur-sm">
             <ShieldCheck className="size-3.5" />
@@ -74,7 +70,7 @@ export default function LoginPage() {
           </p>
 
           <h1 className="mt-6 text-4xl font-bold leading-tight text-white lg:text-5xl">
-            Rent your car in Marrakech with{" "}
+            Rent your car in Agadir with{" "}
             <span className="text-orange-500">total confidence</span>
           </h1>
 
@@ -107,15 +103,8 @@ export default function LoginPage() {
       <div className="flex w-full flex-col justify-center px-6 py-12 lg:w-1/2 lg:px-12">
         <div className="mx-auto w-full max-w-sm">
           <div className="mb-8 lg:hidden">
-            <Link href="/" className="inline-block">
-              <Image
-                src="/logos/logo.png"
-                alt="Yazkech Rental"
-                width={100}
-                height={32}
-                className="h-8 w-auto"
-                priority
-              />
+            <Link href="/" className="inline-block" aria-label="agalux Rental home">
+              <Logo size="sm" priority />
             </Link>
           </div>
 

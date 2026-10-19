@@ -1,15 +1,15 @@
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
 import {
   Globe,
   Menu,
   CalendarCheck,
   ChevronDown,
- 
   X,
 } from "lucide-react"
+
+import { Logo } from "./Logo"
 
 import {
   DropdownMenu,
@@ -66,15 +66,8 @@ export function Header({ solid = false }: { solid?: boolean }) {
   return (
     <header className="fixed inset-x-0 top-0 z-40 h-16 border-b border-zinc-200/60 bg-white shadow-xl shadow-black/5 md:h-20">
       <div className="mx-auto flex h-full max-w-7xl items-center justify-between gap-6 px-4 md:px-6 lg:px-8">
-        <Link href="/">
-          <Image
-            src="/logos/logo.png"
-            alt="Yazkech Rental"
-            width={160}
-            height={40}
-            priority
-            className="h-10 w-auto"
-          />
+        <Link href="/" aria-label="agalux Rental home">
+          <Logo size="lg" priority />
         </Link>
 
         <nav className="hidden items-center gap-9 md:flex">
@@ -149,13 +142,7 @@ export function Header({ solid = false }: { solid?: boolean }) {
             </SheetTrigger>
             <SheetContent side="right" className="w-80 bg-white">
               <SheetHeader className="flex flex-row items-center justify-between border-b border-zinc-100 pb-4">
-                <Image
-                  src="/logos/logo.png"
-                  alt="Yazkech Rental"
-                  width={128}
-                  height={32}
-                  className="h-8 w-auto"
-                />
+                <Logo size="sm" />
                 <SheetClose>
                   <X className="size-5" />
                 </SheetClose>

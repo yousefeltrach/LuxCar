@@ -7,7 +7,7 @@ export function CTASection() {
       <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
         <Reveal>
           <h2 className="mx-auto max-w-3xl font-display text-3xl font-semibold text-white sm:text-4xl md:text-5xl">
-            Ready to explore Marrakech at your own pace ?
+            Ready to explore Morocco at your own pace ?
           </h2>
         </Reveal>
 
