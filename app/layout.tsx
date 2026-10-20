@@ -13,6 +13,11 @@ export const metadata: Metadata = {
   title: "Souss Rent — Car rental in Agadir",
   description:
     "Rent a car in Agadir with Souss Rent. Recent vehicles, transparent pricing, insurance included and pickup at Agadir Al Massira Airport.",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
