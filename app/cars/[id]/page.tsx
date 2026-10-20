@@ -118,7 +118,7 @@ export default async function CarDetailPage({
             <h2 className="mt-1 text-3xl font-semibold">{car.model}</h2>
             <div className="mt-1 flex items-center gap-1 text-sm text-muted-foreground">
               <MapPin className="size-3.5" />
-              Magasin sis au n 46 avenue abdelkrim el khattabi
+              Agadir, Maroc
             </div>
             <div className="mt-4">
               <span className="text-2xl font-bold">{car.pricePerDay} DH</span>
@@ -161,7 +161,7 @@ export default async function CarDetailPage({
               <div>
                 <p className="text-sm text-muted-foreground">Location</p>
                 <p className="font-medium">
-                  Magasin sis au n 46 avenue abdelkrim el khattabi
+                  Agadir, Maroc
                 </p>
               </div>
             </div>

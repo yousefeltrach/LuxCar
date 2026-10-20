@@ -2,23 +2,23 @@ import { Reveal } from "../ui/Reveal";
 
 const destinations = [
   {
-    name: "Marrakech Medina",
+    name: "Agadir Beach",
     desc: "City center",
     image: "/images/destination-djemaa.jpg",
   },
   {
-    name: "Atlas Mountains",
+    name: "Paradise Valley",
     desc: "1h15 drive",
     image: "/images/destination-atlas.jpg",
   },
   {
-    name: "Essaouira Coast",
-    desc: "2h30 drive",
+    name: "Taghazout Coast",
+    desc: "30 min drive",
     image: "/images/destination-essaouira.jpg",
   },
   {
-    name: "Ouzoud Falls",
-    desc: "2h45 drive",
+    name: "Taroudant",
+    desc: "1h drive",
     image: "/images/destination-ozoud.jpg",
   },
 ];

@@ -6,10 +6,10 @@ import { cn } from "cn";
 
 const pickupLocations = [
   "Select a location",
-  "Marrakech-Menara Airport",
-  "Marrakech Medina",
-  "Gueliz",
-  "Palmeraie",
+  "Agadir Al Massira Airport",
+  "Agadir City Center",
+  "Talborjt",
+  "Founty",
 ];
 
 const vehicleTypes = ["Any type", "Compact cars", "Economy", "SUV"];

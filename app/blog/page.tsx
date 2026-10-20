@@ -8,23 +8,23 @@ import { ArrowRight } from "lucide-react";
 
 const articles = [
   {
-    slug: "prix-location-voiture-marrakech",
+    slug: "prix-location-voiture-agadir",
     image: "/images/destination-djemaa.jpg",
     category: "Location de voiture",
-    title: "Combien coûte une location de voiture à Marrakech en 2026 ?",
+    title: "Combien coûte une location de voiture à Agadir en 2026 ?",
     excerpt:
-      "Prix moyens, facteurs qui font varier le tarif et astuces pour réduire le coût de votre location de voiture à Marrakech.",
+      "Prix moyens, facteurs qui font varier le tarif et astuces pour réduire le coût de votre location de voiture à Agadir.",
     date: "5 août 2026",
     readTime: "8 min",
   },
   {
-    slug: "location-voiture-sans-chauffeur-marrakech",
+    slug: "location-voiture-sans-chauffeur-agadir",
     image: "/images/destination-ozoud.jpg",
     category: "Location de voiture",
     title:
-      "Location de voiture sans chauffeur à Marrakech : tout ce qu'il faut savoir",
+      "Location de voiture sans chauffeur à Agadir : tout ce qu'il faut savoir",
     excerpt:
-      "Avantages, conditions et conseils pratiques pour louer une voiture sans chauffeur et explorer Marrakech en toute liberté.",
+      "Avantages, conditions et conseils pratiques pour louer une voiture sans chauffeur et explorer Agadir en toute liberté.",
     date: "28 juillet 2026",
     readTime: "7 min",
   },
@@ -40,12 +40,12 @@ const articles = [
     readTime: "9 min",
   },
   {
-    slug: "marrakech-essaouira-voiture",
+    slug: "agadir-taghazout-voiture",
     image: "/images/destination-essaouira.jpg",
     category: "Destinations",
-    title: "Marrakech à Essaouira en voiture : itinéraire et conseils",
+    title: "Agadir à Taghazout en voiture : itinéraire et conseils",
     excerpt:
-      "Distance, durée, étapes et conseils pratiques pour faire la route entre Marrakech et Essaouira en toute liberté.",
+      "Distance, durée, étapes et conseils pratiques pour faire la route entre Agadir et Taghazout en toute liberté.",
     date: "10 juillet 2026",
     readTime: "8 min",
   },
@@ -71,21 +71,21 @@ export default function BlogPage() {
               Travel &amp; Car Rental Guide
             </p>
             <h1 className="mt-4 font-display text-4xl font-semibold leading-tight sm:text-5xl">
-              Le blog Souss Rental
+              Le blog Souss Rent
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-white/80">
-              Conseils, guides et inspirations pour découvrir Marrakech et le
+              Conseils, guides et inspirations pour découvrir Agadir et le
               Maroc en voiture.
             </p>
           </div>
         </section>
 
         <section className="mx-auto max-w-7xl px-4 py-16 md:px-6 lg:px-8">
-          <Link href="/blog/location-voiture-marrakech-guide" className="group block overflow-hidden rounded-3xl">
+          <Link href="/blog/location-voiture-agadir-guide" className="group block overflow-hidden rounded-3xl">
             <div className="relative h-72 sm:h-96">
               <Image
                 src="/images/herobackground-v2.png"
-                alt="Location de voiture à Marrakech"
+                alt="Location de voiture à Agadir"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -100,11 +100,11 @@ export default function BlogPage() {
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-10">
                 <h2 className="font-display text-2xl font-semibold text-white sm:text-3xl">
-                  Location de voiture à Marrakech : le guide complet
+                  Location de voiture à Agadir : le guide complet
                 </h2>
                 <p className="mt-2 max-w-2xl text-sm text-white/80">
                   Tout ce qu'il faut savoir avant de louer une voiture à
-                  Marrakech : documents, choix du véhicule, assurance et conseils
+                  Agadir : documents, choix du véhicule, assurance et conseils
                   pratiques.
                 </p>
                 <div className="mt-4 flex items-center gap-4 text-xs text-white/60">
@@ -176,7 +176,7 @@ export default function BlogPage() {
               Prêt à prendre la route ?
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-white/80">
-              Découvrez notre flotte de véhicules disponibles à Marrakech et
+              Découvrez notre flotte de véhicules disponibles à Agadir et
               réservez votre location en quelques minutes.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

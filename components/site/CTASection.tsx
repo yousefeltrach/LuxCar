@@ -27,7 +27,7 @@ export function CTASection() {
               Book now
             </a>
             <a
-              href="https://wa.me/+212662611893"
+              href="https://wa.me/212662611893"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-8 py-3.5 font-semibold text-white transition-colors hover:bg-[#1fbb5a]"

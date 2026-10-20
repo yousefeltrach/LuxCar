@@ -28,7 +28,7 @@ type Mode = "signin" | "register"
 
 const headings = {
   signin: { title: "Welcome back", subtitle: "Sign in to manage your bookings and reservations." },
-  register: { title: "Create your account", subtitle: "Join agalux and rent your car in Agadir in minutes." },
+  register: { title: "Create your account", subtitle: "Join Souss Rent and rent your car in Agadir in minutes." },
 } as const
 
 export default function LoginPage() {
@@ -103,7 +103,7 @@ export default function LoginPage() {
       <div className="flex w-full flex-col justify-center px-6 py-12 lg:w-1/2 lg:px-12">
         <div className="mx-auto w-full max-w-sm">
           <div className="mb-8 lg:hidden">
-            <Link href="/" className="inline-block" aria-label="agalux Rental home">
+            <Link href="/" className="inline-block" aria-label="Souss Rent home">
               <Logo size="sm" priority />
             </Link>
           </div>

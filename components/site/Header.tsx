@@ -51,7 +51,7 @@ const supportLinks = [
   { label: "Contact", href: "/contact" },
   { label: "FAQ", href: "/faq" },
   { label: "Blog", href: "/blog" },
-  { label: "WhatsApp", href: "https://wa.me/+212612345678" },
+  { label: "WhatsApp", href: "https://wa.me/212662611893" },
 ]
 
 const accountLinks = [
@@ -66,7 +66,7 @@ export function Header({ solid = false }: { solid?: boolean }) {
   return (
     <header className="fixed inset-x-0 top-0 z-40 h-16 border-b border-zinc-200/60 bg-white shadow-xl shadow-black/5 md:h-20">
       <div className="mx-auto flex h-full max-w-7xl items-center justify-between gap-6 px-4 md:px-6 lg:px-8">
-        <Link href="/" aria-label="agalux Rental home">
+        <Link href="/" aria-label="Souss Rent home">
           <Logo size="lg" priority />
         </Link>
 

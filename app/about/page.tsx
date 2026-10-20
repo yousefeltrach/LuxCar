@@ -8,7 +8,7 @@ import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 import { Reveal } from "@/components/ui/Reveal";
 
 const highlights = [
-  "Based in Marrakech",
+  "Based in Agadir",
   "Insurance included on every rental",
   "Transparent pricing, no hidden fees",
 ];
@@ -36,7 +36,7 @@ const values = [
   {
     title: "Local expertise",
     description:
-      "Based in Marrakech, we know the routes, the roads and the best stops along the way.",
+      "Based in Agadir, we know the routes, the roads and the best stops along the way.",
     icon: MapPin,
   },
   {
@@ -70,7 +70,7 @@ export default function AboutPage() {
             </Reveal>
             <Reveal>
               <p className="mx-auto mt-3 max-w-md text-white/70">
-                A local car rental agency in Marrakech, focused on reliable cars,
+                A local car rental agency in Agadir, focused on reliable cars,
                 fair prices and real support — from booking to drop-off.
               </p>
             </Reveal>
@@ -101,7 +101,7 @@ export default function AboutPage() {
           </Reveal>
           <Reveal>
             <h2 className="mt-4 font-display text-3xl font-semibold sm:text-4xl">
-              A Marrakech agency, built around drivers
+              An Agadir agency, built around drivers
             </h2>
           </Reveal>
           <div className="mt-8 grid items-center gap-12 lg:grid-cols-2">
@@ -109,7 +109,7 @@ export default function AboutPage() {
               <div className="relative aspect-4/3 overflow-hidden rounded-3xl">
                 <Image
                   src="/images/herobackground-v2.png"
-                  alt="Souss Rental fleet"
+                  alt="Souss Rent fleet"
                   fill
                   sizes="(min-width: 1024px) 50vw, 100vw"
                   className="object-cover"
@@ -119,8 +119,8 @@ export default function AboutPage() {
             <div>
               <Reveal>
                 <p className="text-muted-foreground">
-                  Yazkech Rental started with a simple idea: renting a car in
-                  Marrakech shouldn’t come with surprises. We’re a local team
+                  Souss Rent started with a simple idea: renting a car in
+                  Agadir shouldn’t come with surprises. We’re a local team
                   who knows the city, the roads to the Atlas and the coast, and
                   what travelers actually need to get around with confidence.
                 </p>
@@ -203,7 +203,7 @@ export default function AboutPage() {
           <div className="mx-auto max-w-7xl px-4 text-center md:px-6 lg:px-8">
             <Reveal>
               <h2 className="font-display text-3xl font-semibold sm:text-4xl">
-                Ready to explore Marrakech at your own pace ?
+                Ready to explore Agadir at your own pace ?
               </h2>
             </Reveal>
             <Reveal>
@@ -221,7 +221,7 @@ export default function AboutPage() {
                   Book now
                 </Link>
                 <a
-                  href="https://wa.me/+212612345678"
+                  href="https://wa.me/212662611893"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/5"

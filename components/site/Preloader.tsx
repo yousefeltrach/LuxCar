@@ -27,7 +27,7 @@ export function Preloader() {
       <div className="flex flex-col items-center gap-6">
         <Image
           src="/logos/soussLogo.png"
-          alt="agalux Rental"
+          alt="Souss Rent"
           width={1774}
           height={887}
           priority

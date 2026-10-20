@@ -10,17 +10,17 @@ import {
 } from "lucide-react";
 
 const googleMapsUrl =
-  "https://www.google.com/maps/search/?api=1&query=Magasin%20sis%20au%20n%2046%20avenue%20abdelkrim%20el%20khattabi%2C%20Marrakech%2C%20Maroc";
+  "https://www.google.com/maps/search/?api=1&query=Agadir%2C%20Maroc";
 
 const googleMapsEmbedUrl =
-  "https://www.google.com/maps?q=Magasin%20sis%20au%20n%2046%20avenue%20abdelkrim%20el%20khattabi%2C%20Marrakech%2C%20Maroc&output=embed";
+  "https://www.google.com/maps?q=Agadir%2C%20Maroc&output=embed";
 
 const contactCards = [
   {
     icon: Phone,
     label: "Phone",
     value: "+212 6 62 61 18 93",
-    href: "tel:+212704258007",
+    href: "tel:+212662611893",
     linkText: "Call us",
     iconClass: "bg-blue-500/10 text-blue-500",
   },
@@ -44,7 +44,7 @@ const contactCards = [
     icon: MapPin,
     label: "Address",
     value:
-      "Magasin sis au n 46 avenue abdelkrim el khattabi, Marrakech, Maroc",
+      "Agadir, Maroc",
     href: googleMapsUrl,
     linkText: "Get directions",
     iconClass: "bg-violet-500/10 text-violet-500",
@@ -217,7 +217,7 @@ export default function ContactPage() {
               </Reveal>
               <Reveal>
                 <p className="mt-4 text-muted-foreground">
-                  Pickup and drop-off at Marrakech Menara Airport.
+                  Pickup and drop-off at Agadir Al Massira Airport.
                 </p>
               </Reveal>
             </div>
@@ -226,7 +226,7 @@ export default function ContactPage() {
               <div className="h-[300px] w-full overflow-hidden rounded-2xl border shadow-sm sm:h-[400px]">
                 <iframe
                   src={googleMapsEmbedUrl}
-                  title="Yazkech Rental — Magasin sis au n 46 avenue abdelkrim el khattabi, Marrakech, Maroc"
+                  title="Souss Rent — Agadir, Maroc"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   className="size-full border-0"
@@ -241,10 +241,9 @@ export default function ContactPage() {
                     <MapPin className="size-5" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold">Yazkech Rental</p>
+                    <p className="text-sm font-semibold">Souss Rent</p>
                     <p className="text-sm text-muted-foreground" dir="ltr">
-                      Magasin sis au n 46 avenue abdelkrim el khattabi,
-                      Marrakech, Maroc
+                      Agadir, Maroc
                     </p>
                   </div>
                 </div>
@@ -278,7 +277,7 @@ export default function ContactPage() {
             <Reveal>
               <div className="flex flex-col justify-center gap-3 pt-2 sm:flex-row">
                 <a
-                  href="tel:+212704258007"
+                  href="tel:+212662611893"
                   className="inline-flex items-center justify-center gap-1.5 rounded-lg bg-primary px-2.5 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/80"
                 >
                   <Phone className="size-4" />

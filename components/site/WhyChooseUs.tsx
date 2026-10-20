@@ -5,7 +5,7 @@ const perks = [
   {
     icon: Plane,
     title: "Free delivery",
-    desc: "Pickup and return offered at the airport or anywhere in Marrakech.",
+    desc: "Pickup and return offered at the airport or anywhere in Agadir.",
   },
   {
     icon: Infinity,

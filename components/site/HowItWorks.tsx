@@ -15,7 +15,7 @@
 //   {
 //     icon: KeyRound,
 //     title: "Drive away",
-//     description: "Pick up your car and start exploring Marrakech.",
+//     description: "Pick up your car and start exploring Agadir.",
 //   },
 // ];
 
@@ -75,7 +75,7 @@ const steps = [
   {
     number: '3',
     title: 'Drive away',
-    description: 'Pick up your car and start\nexploring Marrakech.',
+    description: 'Pick up your car and start\nexploring Agadir.',
     icon: KeyRound,
   },
 ]

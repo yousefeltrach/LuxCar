@@ -17,7 +17,7 @@ interface AccountSidebarProps {
 export function AccountSidebar({ activeItem }: AccountSidebarProps) {
   return (
     <aside className="hidden lg:flex lg:w-64 lg:flex-col lg:border-r lg:border-foreground/10 lg:p-6">
-      <Link href="/" className="mb-8 inline-block" aria-label="agalux Rental home">
+      <Link href="/" className="mb-8 inline-block" aria-label="Souss Rent home">
         <Logo size="sm" priority />
       </Link>
 

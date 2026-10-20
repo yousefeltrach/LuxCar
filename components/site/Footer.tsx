@@ -17,7 +17,7 @@ const supportLinks = [
   { label: "Contact", href: "/contact" },
   { label: "FAQ", href: "/faq" },
   { label: "Blog", href: "/blog" },
-  { label: "WhatsApp", href: "https://wa.me/+212612345678" },
+  { label: "WhatsApp", href: "https://wa.me/212662611893" },
 ];
 
 const accountLinks = [
@@ -84,7 +84,7 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col items-center justify-between gap-2 border-t border-foreground/10 py-6 text-sm text-muted-foreground md:flex-row">
-          <span>&copy; 2026 agalux Rental. All rights reserved.</span>
+          <span>&copy; 2026 Souss Rent. All rights reserved.</span>
           <span>Agadir, Morocco</span>
         </div>
       </div>

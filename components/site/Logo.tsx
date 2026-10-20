@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 
-const BRAND = "agalux Rental"
+const BRAND = "Souss Rent"
 
 type LogoSize = "xs" | "sm" | "md" | "lg" | "xl"
 
