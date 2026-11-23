@@ -85,7 +85,7 @@ export default async function CarDetailPage({
 
       <div className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:grid lg:grid-cols-3 lg:gap-10 lg:px-8">
         <div className="lg:col-span-2">
-          <div className="relative aspect-[16/10] overflow-hidden rounded-3xl">
+          <div className="relative aspect-16/10 overflow-hidden rounded-3xl">
             <Image
               src={images[0]}
               alt={`${car.brand} ${car.model}`}
