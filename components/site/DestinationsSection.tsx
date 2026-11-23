@@ -1,24 +1,25 @@
-import { Reveal } from "../shared/Reveal";
+import Image from "next/image";
+import { Reveal } from "../ui/Reveal";
 
 const destinations = [
   {
-    name: "Marrakech Medina",
+    name: "Agadir Beach",
     desc: "City center",
     image: "/images/destination-djemaa.jpg",
   },
   {
-    name: "Atlas Mountains",
+    name: "Paradise Valley",
     desc: "1h15 drive",
     image: "/images/destination-atlas.jpg",
   },
   {
-    name: "Essaouira Coast",
-    desc: "2h30 drive",
+    name: "Taghazout Coast",
+    desc: "30 min drive",
     image: "/images/destination-essaouira.jpg",
   },
   {
-    name: "Ouzoud Falls",
-    desc: "2h45 drive",
+    name: "Taroudant",
+    desc: "1h drive",
     image: "/images/destination-ozoud.jpg",
   },
 ];
@@ -43,10 +44,12 @@ export function DestinationsSection() {
                 href="/cars"
                 className="group relative block h-72 overflow-hidden rounded-3xl sm:h-80"
               >
-                <img
+                <Image
                   src={dest.image}
                   alt={dest.name}
-                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-5">

@@ -1,4 +1,4 @@
-import { Reveal } from "../shared/Reveal";
+import { Reveal } from "../ui/Reveal";
 import { CalendarCheck, MessageCircle } from "lucide-react";
 
 export function CTASection() {
@@ -7,7 +7,7 @@ export function CTASection() {
       <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
         <Reveal>
           <h2 className="mx-auto max-w-3xl font-display text-3xl font-semibold text-white sm:text-4xl md:text-5xl">
-            Ready to explore Marrakech at your own pace ?
+            Ready to explore Morocco at your own pace ?
           </h2>
         </Reveal>
 
@@ -27,7 +27,7 @@ export function CTASection() {
               Book now
             </a>
             <a
-              href="https://wa.me/+212662611893"
+              href="https://wa.me/212662611893"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-8 py-3.5 font-semibold text-white transition-colors hover:bg-[#1fbb5a]"

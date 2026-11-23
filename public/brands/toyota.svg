@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 90">
+  <g fill="none" stroke="#8b8f94" stroke-width="9" stroke-linecap="round">
+    <ellipse cx="120" cy="38" rx="40" ry="30" transform="rotate(-26 120 38)"/>
+    <ellipse cx="98" cy="20" rx="26" ry="12" transform="rotate(-26 98 20)"/>
+    <ellipse cx="136" cy="46" rx="26" ry="12" transform="rotate(26 136 46)"/>
+  </g>
+  <text x="120" y="80" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#1a1a1a" text-anchor="middle" letter-spacing="4">TOYOTA</text>
+</svg>

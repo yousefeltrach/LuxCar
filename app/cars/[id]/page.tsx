@@ -1,9 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ArrowLeft, Heart, ChevronRight, MapPin } from "lucide-react";
 import { cars } from "@/types/carsRent";
 
-const CDN = "https://api.yazkechrental.com/uploads/cars";
+const CDN = "https://api.soussrental.com/uploads/cars";
 const IMAGE_ROOT = "/cars/";
 
 const IMAGE_MAP: Record<string, string[]> = {
@@ -14,10 +15,13 @@ const IMAGE_MAP: Record<string, string[]> = {
   ],
 };
 
-function getCarImages(carId: string): string[] {
+function getCarImages(carId: string, fallback: string): string[] {
   const mapped = IMAGE_MAP[carId];
   if (mapped) {
     return mapped.map((uuid) => `${CDN}/${carId}/${uuid}.webp`);
+  }
+  if (fallback) {
+    return [`${IMAGE_ROOT}${fallback}`];
   }
   const prefix = carId.slice(0, 8);
   return [
@@ -40,7 +44,7 @@ export default async function CarDetailPage({
   const car = cars.find((c) => c.slug === id);
   if (!car) notFound();
 
-  const images = getCarImages(car.id);
+  const images = getCarImages(car.id, car.image);
   const similar = cars.filter((c) => c.slug !== car.slug).slice(0, 3);
 
   return (
@@ -81,11 +85,14 @@ export default async function CarDetailPage({
 
       <div className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:grid lg:grid-cols-3 lg:gap-10 lg:px-8">
         <div className="lg:col-span-2">
-          <div className="relative aspect-[16/10] overflow-hidden rounded-3xl">
-            <img
+          <div className="relative aspect-16/10 overflow-hidden rounded-3xl">
+            <Image
               src={images[0]}
               alt={`${car.brand} ${car.model}`}
-              className="h-full w-full object-cover"
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 66vw"
+              className="object-cover"
             />
             <span className="absolute bottom-3 right-3 rounded-full bg-black/60 px-2.5 py-1 text-xs text-white">
               1/3
@@ -99,10 +106,12 @@ export default async function CarDetailPage({
                   i === 0 ? "ring-2 ring-primary" : "ring-1 ring-foreground/10"
                 }`}
               >
-                <img
+                <Image
                   src={img}
                   alt={`${car.brand} ${car.model} ${i + 1}`}
-                  className="h-full w-full object-cover"
+                  fill
+                  sizes="96px"
+                  className="object-cover"
                 />
               </div>
             ))}
@@ -115,7 +124,7 @@ export default async function CarDetailPage({
             <h2 className="mt-1 text-3xl font-semibold">{car.model}</h2>
             <div className="mt-1 flex items-center gap-1 text-sm text-muted-foreground">
               <MapPin className="size-3.5" />
-              Magasin sis au n 46 avenue abdelkrim el khattabi
+              Agadir, Maroc
             </div>
             <div className="mt-4">
               <span className="text-2xl font-bold">{car.pricePerDay} DH</span>
@@ -158,7 +167,7 @@ export default async function CarDetailPage({
               <div>
                 <p className="text-sm text-muted-foreground">Location</p>
                 <p className="font-medium">
-                  Magasin sis au n 46 avenue abdelkrim el khattabi
+                  Agadir, Maroc
                 </p>
               </div>
             </div>
@@ -207,10 +216,12 @@ export default async function CarDetailPage({
               className="group overflow-hidden rounded-3xl bg-white ring-1 ring-foreground/10 transition-shadow hover:shadow-2xl hover:shadow-black/5"
             >
               <div className="relative h-52 overflow-hidden sm:h-56">
-                <img
+                <Image
                   src={`${IMAGE_ROOT}${s.image}`}
                   alt={s.model}
-                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <button
                   aria-label="Add to wishlist"

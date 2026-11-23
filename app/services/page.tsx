@@ -1,4 +1,4 @@
-import { Reveal } from "@/components/shared/Reveal";
+import { Reveal } from "@/components/ui/Reveal";
 import { Footer, Header, MobileNav, WhatsAppFloat } from "@/components/site";
 import { Car, Plane, ShieldCheck, Clock } from "lucide-react";
 

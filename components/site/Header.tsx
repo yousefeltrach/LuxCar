@@ -1,20 +1,16 @@
 "use client"
 
-import { useState, useEffect } from "react"
 import Link from "next/link"
 import {
   Globe,
   Menu,
   CalendarCheck,
   ChevronDown,
-  Home,
-  Car,
-  Phone,
-  User,
-  MessageCircle,
   X,
 } from "lucide-react"
-import { Button } from "@/components/ui/button"
+
+import { Logo } from "./Logo"
+
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -26,13 +22,12 @@ import {
   SheetTrigger,
   SheetContent,
   SheetHeader,
-  SheetTitle,
   SheetClose,
 } from "@/components/ui/sheet"
 
 const navLinks = [
   { label: "Vehicles", href: "/cars" },
-  { label: "How it works", href: "#how-it-works" },
+  { label: "How it works", href: "/#how-it-works" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ]
@@ -56,7 +51,7 @@ const supportLinks = [
   { label: "Contact", href: "/contact" },
   { label: "FAQ", href: "/faq" },
   { label: "Blog", href: "/blog" },
-  { label: "WhatsApp", href: "https://wa.me/+212612345678" },
+  { label: "WhatsApp", href: "https://wa.me/212662611893" },
 ]
 
 const accountLinks = [
@@ -65,26 +60,14 @@ const accountLinks = [
   { label: "Book now", href: "/booking" },
 ]
 
-export function Header() {
-  const [scrolled, setScrolled] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 24)
-    window.addEventListener("scroll", handleScroll, { passive: true })
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+export function Header({ solid = false }: { solid?: boolean }) {
+  void solid
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-40 h-16 transition-all duration-300 md:h-20 ${scrolled ? "border-b border-zinc-200/60 bg-white shadow-xl shadow-black/5" : "bg-transparent backdrop-blur-md"}`}
-    >
+    <header className="fixed inset-x-0 top-0 z-40 h-16 border-b border-zinc-200/60 bg-white shadow-xl shadow-black/5 md:h-20">
       <div className="mx-auto flex h-full max-w-7xl items-center justify-between gap-6 px-4 md:px-6 lg:px-8">
-        <Link href="/">
-          <img
-            src="/logos/logo.png"
-            alt="Yazkech Rental"
-            className="h-10 w-auto"
-          />
+        <Link href="/" aria-label="Souss Rent home">
+          <Logo size="lg" priority />
         </Link>
 
         <nav className="hidden items-center gap-9 md:flex">
@@ -92,10 +75,10 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className={`relative text-sm font-medium tracking-wide transition-colors duration-300 hover:text-primary ${scrolled ? "text-zinc-900" : "text-white"}`}
+              className="relative text-sm font-medium tracking-wide text-zinc-900 transition-colors duration-300 hover:text-primary"
             >
               {link.label}
-              <span className="absolute -bottom-1 left-0 h-0.5 w-full origin-left rounded-full bg-primary transition-transform duration-300 scale-x-0 hover:scale-x-100" />
+              <span className="absolute -bottom-1 left-0 h-0.5 w-full origin-left rounded-full bg-orange-500 transition-transform duration-300 scale-x-0 hover:scale-x-100" />
             </Link>
           ))}
         </nav>
@@ -103,7 +86,7 @@ export function Header() {
         <div className="hidden items-center gap-3 md:flex">
           <DropdownMenu>
             <DropdownMenuTrigger
-              className={`inline-flex items-center gap-1 rounded-md p-2 transition-colors duration-300 hover:text-primary ${scrolled ? "text-zinc-900" : "text-white"}`}
+              className="inline-flex items-center gap-1 rounded-md p-2 text-zinc-900 transition-colors duration-300 hover:text-primary"
             >
               <Globe className="size-5" />
               <ChevronDown className="size-3.5" />
@@ -122,7 +105,7 @@ export function Header() {
 
           <Link
             href="/login"
-            className={`rounded-md px-3 py-2 text-sm font-medium transition-colors duration-300 hover:text-primary ${scrolled ? "text-zinc-900" : "text-white"}`}
+            className="rounded-md px-3 py-2 text-sm font-medium text-zinc-900 transition-colors duration-300 hover:text-primary"
           >
             Sign in
           </Link>
@@ -138,9 +121,7 @@ export function Header() {
 
         <div className="flex items-center gap-2 md:hidden">
           <DropdownMenu>
-            <DropdownMenuTrigger
-              className={`inline-flex items-center rounded-md p-2 transition-colors duration-300 hover:text-primary ${scrolled ? "text-zinc-900" : "text-white"}`}
-            >
+            <DropdownMenuTrigger className="inline-flex items-center rounded-md p-2 text-zinc-900 transition-colors duration-300 hover:text-primary">
               <Globe className="size-5" />
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
@@ -156,18 +137,12 @@ export function Header() {
           </DropdownMenu>
 
           <Sheet>
-            <SheetTrigger
-              className={`inline-flex items-center rounded-md p-2 transition-colors duration-300 hover:text-primary ${scrolled ? "text-zinc-900" : "text-white"}`}
-            >
+            <SheetTrigger className="inline-flex items-center rounded-md p-2 text-zinc-900 transition-colors duration-300 hover:text-primary">
               <Menu className="size-6" />
             </SheetTrigger>
             <SheetContent side="right" className="w-80 bg-white">
               <SheetHeader className="flex flex-row items-center justify-between border-b border-zinc-100 pb-4">
-                <img
-src="/logos/logo.png"
-                  alt="Yazkech Rental"
-                  className="h-8 w-auto"
-                />
+                <Logo size="sm" />
                 <SheetClose>
                   <X className="size-5" />
                 </SheetClose>

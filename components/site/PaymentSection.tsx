@@ -1,5 +1,8 @@
 import { CalendarCheck, Check, Lock } from "lucide-react";
-import { Reveal } from "../shared/Reveal";
+import Link from "next/link";
+import { Reveal } from "../ui/Reveal";
+import { Card } from "../ui/card";
+import Image from "next/image";
 
 const IMAGE_ROOT = "/images/";
 
@@ -15,7 +18,7 @@ export function PaymentSection() {
       <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <Reveal>
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">Payment</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-orange-500">Payment</p>
             <h2 className="mt-3 font-display text-3xl font-semibold sm:text-4xl">
               Simple and secure payment
             </h2>
@@ -32,29 +35,29 @@ export function PaymentSection() {
                 </div>
               ))}
             </div>
-            <a
+            <Link
               href="/cars"
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 font-semibold text-white transition-colors hover:bg-primary/90"
+              className="mt-8 inline-flex h-auto items-center gap-2 rounded-full bg-primary px-7 py-3.5 font-semibold text-white transition-colors hover:bg-primary/90"
             >
               <CalendarCheck className="size-4.5" />
               Book now
-            </a>
+            </Link>
           </Reveal>
 
           <Reveal delay={150}>
-            <div className="rounded-3xl bg-muted/50 p-8 md:p-10">
+            <Card className="rounded-3xl bg-muted/50 p-8 md:p-10">
               <h3 className="text-xl font-semibold">Accepted payment methods</h3>
               <p className="mt-1 text-sm text-muted-foreground">Your payment information is protected.</p>
               <div className="mt-6 flex items-center gap-4">
-                <img src={`${IMAGE_ROOT}cmi.png`} alt="Paiement CMI" className="h-[18px] w-auto" />
-                <img src={`${IMAGE_ROOT}visalogo.svg`} alt="Visa" className="h-[18px] w-auto" />
-                <img src={`${IMAGE_ROOT}mastercard.svg`} alt="Mastercard" className="h-[18px] w-auto" />
+                <Image src={`${IMAGE_ROOT}cmi.png`} alt="Paiement CMI" width={56} height={18} className="h-[18px] w-auto" />
+                <Image src={`${IMAGE_ROOT}visalogo.svg`} alt="Visa" width={72} height={18} unoptimized className="h-[18px] w-auto" />
+                <Image src={`${IMAGE_ROOT}mastercard.svg`} alt="Mastercard" width={72} height={18} unoptimized className="h-[18px] w-auto" />
               </div>
               <p className="mt-8 flex items-center gap-2 border-t border-foreground/10 pt-6 text-sm text-muted-foreground">
-                <Lock className="size-4" />
+                <Lock className="size-4 text-orange-500" />
                 Secure payment by card
               </p>
-            </div>
+            </Card>
           </Reveal>
         </div>
       </div>

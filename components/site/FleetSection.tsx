@@ -1,5 +1,10 @@
+
+
 import { ChevronRight, Heart } from "lucide-react";
-import { Reveal } from "../shared/Reveal";
+import { Reveal } from "../ui/Reveal";
+import Link from "next/link";
+import Image from "next/image";
+import { Card, CardFooter } from "../ui/card";
 
 interface Car {
   brand: string;
@@ -80,24 +85,26 @@ export function FleetSection() {
             <h2 className="mt-3 font-display text-3xl font-semibold sm:text-4xl">Cars worth the detour</h2>
             <p className="mt-3 max-w-md text-muted-foreground">Choose the car that fits your journey.</p>
           </div>
-          <a
+          <Link
             href="/cars"
             className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 px-5 py-2.5 text-sm font-semibold text-primary transition-all hover:gap-2.5 hover:bg-primary/5"
           >
             View the entire fleet
             <ChevronRight className="size-4" />
-          </a>
+          </Link>
         </Reveal>
 
-        <div className="mt-14 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <Card className="mt-14 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {cars.map((car, i) => (
             <Reveal key={car.slug} delay={i * 80}>
               <article className="group overflow-hidden rounded-3xl bg-white ring-1 ring-foreground/10 transition-shadow hover:shadow-2xl hover:shadow-black/5">
                 <div className="relative h-52 overflow-hidden sm:h-56">
-                  <img
+                  <Image
                     src={`${IMAGE_ROOT}${car.image}`}
                     alt={car.model}
-                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <button
                     aria-label="Ajouter aux favoris"
@@ -112,7 +119,7 @@ export function FleetSection() {
                   <p className="mt-0.5 text-sm text-muted-foreground">
                     {car.transmission} · {car.seats} Seats
                   </p>
-                  <div className="mt-4 flex items-center justify-between">
+                  <CardFooter className="mt-4 pt-4 flex items-center justify-between">
                     <p className="text-lg font-bold">
                       {car.price}{" "}
                       <span className="text-sm font-normal text-muted-foreground">DH/day</span>
@@ -123,12 +130,12 @@ export function FleetSection() {
                     >
                       View details <ChevronRight className="size-4" />
                     </a>
-                  </div>
+                  </CardFooter>
                 </div>
               </article>
             </Reveal>
           ))}
-        </div>
+        </Card>
       </div>
     </section>
   );

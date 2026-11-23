@@ -9,7 +9,7 @@ const items = [
 
 export function TrustStrip() {
   return (
-    <section className="border-b bg-muted/30 py-5">
+    <section className="border-b bg-muted/30 py-24">
       <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-y-6 gap-x-4 lg:grid-cols-4">
           {items.map(({ icon: Icon, label }) => (
