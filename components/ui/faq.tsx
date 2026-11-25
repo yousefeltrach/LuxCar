@@ -151,14 +151,14 @@ function Answer({
             id={ids.answer}
             role="region"
             aria-labelledby={ids.question}
-            className="max-w-[85%] rounded-[18px] rounded-br-[6px] bg-[var(--faq-accent)] px-4 py-2.5 text-[15px] leading-[1.45] tracking-[-0.01em] text-white"
+            className="max-w-[85%] rounded-[18px] rounded-br-[6px] bg-(--faq-accent) px-4 py-2.5 text-[15px] leading-[1.45] tracking-[-0.01em] text-white"
           >
             {item.answer}
           </div>
           {avatar != null && (
             <span
               aria-hidden
-              className="flex size-8 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white/60 text-[var(--faq-accent)] shadow-[0_12px_32px_-12px_rgba(0,0,0,0.15)] backdrop-blur-2xl backdrop-saturate-150 dark:bg-white/[0.07] dark:shadow-[0_12px_32px_-12px_rgba(0,0,0,0.5)] [&>img]:size-full [&>img]:object-cover"
+              className="flex size-8 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white/60 text-(--faq-accent) shadow-[0_12px_32px_-12px_rgba(0,0,0,0.15)] backdrop-blur-2xl backdrop-saturate-150 dark:bg-white/[0.07] dark:shadow-[0_12px_32px_-12px_rgba(0,0,0,0.5)] [&>img]:size-full [&>img]:object-cover"
             >
               {avatar}
             </span>
