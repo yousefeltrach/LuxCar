@@ -64,10 +64,10 @@ export function Header({ solid = false }: { solid?: boolean }) {
   void solid
 
   return (
-    <header className="fixed inset-x-0 top-0 z-40 h-16 border-b border-zinc-200/60 bg-white shadow-xl shadow-black/5 md:h-20">
+    <header className="fixed inset-x-0 top-0 z-50 h-16 mix-blend-difference md:h-20">
       <div className="mx-auto flex h-full max-w-7xl items-center justify-between gap-6 px-4 md:px-6 lg:px-8">
         <Link href="/" aria-label="Souss Rent home">
-          <Logo size="lg" priority />
+          <Logo size="lg" priority className="brightness-0 invert" />
         </Link>
 
         <nav className="hidden items-center gap-9 md:flex">
@@ -75,10 +75,10 @@ export function Header({ solid = false }: { solid?: boolean }) {
             <Link
               key={link.href}
               href={link.href}
-              className="relative text-sm font-medium tracking-wide text-zinc-900 transition-colors duration-300 hover:text-primary"
+              className="group relative text-sm font-medium tracking-wide text-white transition-opacity duration-300 hover:opacity-70"
             >
               {link.label}
-              <span className="absolute -bottom-1 left-0 h-0.5 w-full origin-left rounded-full bg-orange-500 transition-transform duration-300 scale-x-0 hover:scale-x-100" />
+              <span className="absolute -bottom-1 left-0 h-0.5 w-full origin-left scale-x-0 rounded-full bg-white transition-transform duration-300 group-hover:scale-x-100" />
             </Link>
           ))}
         </nav>
@@ -86,7 +86,7 @@ export function Header({ solid = false }: { solid?: boolean }) {
         <div className="hidden items-center gap-3 md:flex">
           <DropdownMenu>
             <DropdownMenuTrigger
-              className="inline-flex items-center gap-1 rounded-md p-2 text-zinc-900 transition-colors duration-300 hover:text-primary"
+              className="inline-flex items-center gap-1 rounded-md p-2 text-white transition-opacity duration-300 hover:opacity-70"
             >
               <Globe className="size-5" />
               <ChevronDown className="size-3.5" />
@@ -105,14 +105,14 @@ export function Header({ solid = false }: { solid?: boolean }) {
 
           <Link
             href="/login"
-            className="rounded-md px-3 py-2 text-sm font-medium text-zinc-900 transition-colors duration-300 hover:text-primary"
+            className="rounded-md px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 hover:opacity-70"
           >
             Sign in
           </Link>
 
           <Link
             href="/cars"
-            className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-md transition-colors duration-300 hover:bg-primary/90"
+            className="inline-flex items-center gap-1.5 rounded-full border border-white px-5 py-2.5 text-sm font-semibold text-white transition-opacity duration-300 hover:opacity-80"
           >
             <CalendarCheck className="size-4" />
             Book a car
@@ -121,7 +121,7 @@ export function Header({ solid = false }: { solid?: boolean }) {
 
         <div className="flex items-center gap-2 md:hidden">
           <DropdownMenu>
-            <DropdownMenuTrigger className="inline-flex items-center rounded-md p-2 text-zinc-900 transition-colors duration-300 hover:text-primary">
+            <DropdownMenuTrigger className="inline-flex items-center rounded-md p-2 text-white transition-opacity duration-300 hover:opacity-70">
               <Globe className="size-5" />
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
@@ -137,7 +137,7 @@ export function Header({ solid = false }: { solid?: boolean }) {
           </DropdownMenu>
 
           <Sheet>
-            <SheetTrigger className="inline-flex items-center rounded-md p-2 text-zinc-900 transition-colors duration-300 hover:text-primary">
+            <SheetTrigger className="inline-flex items-center rounded-md p-2 text-white transition-opacity duration-300 hover:opacity-70">
               <Menu className="size-6" />
             </SheetTrigger>
             <SheetContent side="right" className="w-80 bg-white">
